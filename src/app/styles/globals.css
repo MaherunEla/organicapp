@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body{
+    font-size: 1 rem;
+    box-sizing:border-box;
+    position: relative;
+    overflow-x:hidden;
+    background: white;
+    @apply font-roboto;
+
+  }
+  h1{
+    @apply font-roboto text-sea_green text-[70px] font-extrabold leading-normal;
+
+  }
+  h2{
+    @apply font-roboto text-sea_green text-[50px] font-extrabold leading-normal;
+
+  }
+  h3{
+    @apply font-roboto text-sea_green text-[40px] font-extrabold leading-normal;
+
+  }
+  h4{
+    @apply font-roboto text-[35px] font-extrabold leading-normal;
+
+  }
+  h5{
+    @apply font-roboto text-sea_green text-[30px] font-extrabold leading-normal;
+
+  }
+  h6{
+    @apply font-roboto text-sea_green text-[25px] font-extrabold leading-normal;
+
+  }
+  p{
+    @apply font-open_sen text-sea_green text-lg font-normal leading-[29.7px];
+  }
+  .quotes{
+    @apply font-open_sen text-xl font-bold leading-[33px];
+  }
+  .sb{
+    @apply border border-red-500;
+  }
+  .bg-styles{
+    @apply bg-center bg-no-repeat bg-cover;
+  }
+
+
+
+
+
+}
+
+
+.container {
+  margin:0 auto;
+  width: calc(100% - 80px);
+  max-width:1595px;
+}
+
