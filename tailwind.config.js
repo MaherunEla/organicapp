@@ -15,6 +15,7 @@ module.exports = {
       colors:{
         sea_green:'#274C5B',
         light_green:'#7EB693',
+        green:'#7EB693',
         yellow:'#EFD372',
         gray:'#D4D4D4',
         cream:'#F9F8F8',

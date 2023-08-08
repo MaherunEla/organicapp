@@ -1,9 +1,16 @@
 import React from 'react'
 import AboutHero from './Components/AboutHero'
+import AboutCreative from './Components/AboutCreative'
 
 const page = () => {
   return (
-    <AboutHero/>
+    <div>
+         <AboutHero/>
+         <AboutCreative/>
+
+    </div>
+   
+    
   )
 }
 
