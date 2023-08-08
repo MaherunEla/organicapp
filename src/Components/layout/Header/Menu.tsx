@@ -38,7 +38,7 @@ const Menu:React.FC<{showPageMenu:boolean,setShowPageMenu:any}> = ({showPageMenu
                             </li>
                         ): (
                             <li className='cursor-pointer'>
-                                <Link href={item?.url}>
+                                <Link href={item?.url!}>
                                     {item.name}
                                 </Link>
                             </li>
