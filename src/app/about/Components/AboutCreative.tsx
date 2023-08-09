@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/Components/Shared/button";
+import Button from "@/Components/Shared/Button";
 const AboutCreative = () => {
   return (
     <div className="pt-[68px]">
