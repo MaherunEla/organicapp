@@ -1,11 +1,13 @@
 import React from 'react'
 
-const button = () => {
+const Button = (props:{title:string}) => {
   return (
-    <div>
+    <div className='px-[39px] py-[28px] bg-sea_green'>
+      <h6>{props.title}</h6>
+
         
     </div>
   )
 }
 
-export default button
+export default Button
