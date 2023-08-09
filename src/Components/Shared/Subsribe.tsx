@@ -3,7 +3,7 @@ import React from "react";
 
 const Subscribe = () => {
   return (
-    <div className="container flex items-center justify-center">
+    <div className="container flex items-center justify-center pt-[114px] pb-[117px]">
       <div
         className={`bg-[url('/assets/images/Home/Photo.jpg')] rounded-3xl bg-styles w-[1400px] h-[550px] lg:h-[323px] flex flex-col md:flex-row items-center md:justify-between px-20 py-20`}
       >

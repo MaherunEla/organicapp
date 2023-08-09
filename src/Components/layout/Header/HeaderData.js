@@ -7,7 +7,7 @@ export const Data = [
     {
         id:2,
         name:"About",
-        url:"/"
+        url:"/about"
     },
     {
         id:3,
@@ -17,7 +17,7 @@ export const Data = [
     {
         id:4,
         name:"Shop",
-        url:"/"
+        url:"/shop"
     },
     {
         id:5,

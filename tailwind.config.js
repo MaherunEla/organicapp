@@ -21,6 +21,7 @@ module.exports = {
         cream:'#F9F8F8',
         very_light_green:'#EFF6F1',
         dark_gray:'#525C60',
+        white:'#FFFFFF',
       },
       fontFamily:{
         roboto:["var(--roboto)"],
