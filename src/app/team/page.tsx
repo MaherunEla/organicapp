@@ -1,13 +1,13 @@
 import React from 'react'
-import PortfolioHero from './Components/PortfolioHero'
-import PortfolioProject from './Components/PortfolioProject'
+import TeamHero from './Components/TeamHero'
+import TeamCard from './Components/TeamCard'
 import Subscribe from '@/Components/Shared/Subsribe'
 
 const page = () => {
   return (
     <div>
-        <PortfolioHero/>
-        <PortfolioProject/>
+        <TeamHero/>
+        <TeamCard/>
         <Subscribe/>
     </div>
   )

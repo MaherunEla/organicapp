@@ -25,7 +25,7 @@
 
   }
   h4{
-    @apply font-roboto text-[35px] font-extrabold leading-normal;
+    @apply font-roboto text-sea_green text-[35px] font-extrabold leading-normal;
 
   }
   h5{

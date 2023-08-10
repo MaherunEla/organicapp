@@ -84,7 +84,7 @@ const AboutTeam = () => {
         <p className='pb-[41px] w-full xl:w-[852px] text-center text-dark_gray'>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[27px]'>
             
-                    <div className='w-[449px] h-[615px] bg-cream rounded-[30px] '>
+                    <div className='w-[449px] h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
                         <div className='w-[449px] h-[485px] relative'>
                             <Image 
                             className="rounded-t-[30px]"
@@ -108,7 +108,7 @@ const AboutTeam = () => {
 
                     </div>
 
-                    <div className='w-[449px] h-[615px] bg-cream rounded-[30px] '>
+                    <div className='w-[449px] h-[615px] bg-cream  hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
                         <div className='w-[449px] h-[485px] relative'>
                             <Image 
                             className="rounded-t-[30px]"
@@ -133,7 +133,7 @@ const AboutTeam = () => {
 
                     </div>
 
-                    <div className='w-[449px] h-[615px] bg-cream rounded-[30px] '>
+                    <div className='w-[449px] h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
                         <div className='w-[449px] h-[485px] relative'>
                             <Image 
                             className="rounded-t-[30px]"
