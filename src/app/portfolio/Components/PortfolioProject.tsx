@@ -8,7 +8,7 @@ const PortfolioProject = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {
           PortfolioProjectData.map((item,index)=>(
-            <div>
+            <div key={index}>
               <div className='w-[451px] h-[421px] relative'>
               <Image 
                 className='rounded-[30px]'
