@@ -1,10 +1,12 @@
 import React from 'react'
 import { BlogPostData } from './BlogPostData'
+import Image from 'next/image'
+import {BsArrowRightShort} from 'react-icons/bs'
 
 const BlogPost = () => {
   return (
     <div className='container flex items-center justify-center pt-[117px] '>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-[46px]'>
+        <div className=' grid grid-cols-1 lg:grid-cols-2 gap-[46px]'>
             {
                 BlogPostData.map((item,index)=>(
                     
@@ -18,15 +20,28 @@ const BlogPost = () => {
                         height:'529px',
                     }} 
 
-                     className='sb w-full xl:w-[677px] h-[589px] ' key={index}>
+                     className=' w-full xl:w-[677px] h-[524px] ' key={index}>
                         <div className='w-[82px] h-[82px] bg-white rounded-full m-[46px] flex flex-col items-center justify-center'>
                             <h6>{item.date}</h6>
                             <h6 className='text-xl '>{item.month}</h6>
 
                         </div>
 
-                        <div className='mx-[46px] py-[54px] px-[57px] bg-white rounded-[30px]'>
+                        <div className='mt-[210px] mx-[46px] py-[54px] px-[57px] bg-white rounded-[30px]'>
+                            <div className='flex flex-row gap-2'>
+                                <div className='w-[18px] h-[20px] relative'>
+                                    <Image src={item.icon} fill alt="icon"/>
+
+                                </div>
+                                <h6 className='font-roboto text-lg font-normal'>By {item.author}</h6>
                             </div>
+                            <h6 className='pt-[19px]'>{item.title}</h6>
+                            <p>{item.subTitle}</p>
+                           <div className='pt-[19px] flex items-center gap-[9px]'>
+                           <h6 className='font-roboto text-[20px] font-bold leading-normal text-sea_green'>Read More</h6>
+                            <BsArrowRightShort className=' m-[2px] border rounded-full border-[#335B6B] bg-[#335B6B] text-white'/>
+                            </div>
+                        </div>
 
                     </div>
 
