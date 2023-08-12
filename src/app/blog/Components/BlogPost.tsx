@@ -9,7 +9,7 @@ const BlogPost = () => {
         <div className=' grid grid-cols-1 lg:grid-cols-2 gap-[46px]'>
             {
                 BlogPostData.map((item,index)=>(
-                    
+                    <div className='w-full xl:w-[677px] h-[589px]'   key={index}>
                     <div style={{
                         background:`url(${item?.img}) no-repeat  `,
                         backgroundColor:'#F9F8F8',
@@ -20,14 +20,14 @@ const BlogPost = () => {
                         height:'529px',
                     }} 
 
-                     className=' w-full xl:w-[677px] h-[524px] ' key={index}>
-                        <div className='w-[82px] h-[82px] bg-white rounded-full m-[46px] flex flex-col items-center justify-center'>
+                     className='p-[46px] w-full xl:w-[677px] h-[524px] '>
+                        <div className='w-[82px] h-[82px] bg-white rounded-full  flex flex-col items-center justify-center'>
                             <h6>{item.date}</h6>
                             <h6 className='text-xl '>{item.month}</h6>
 
                         </div>
 
-                        <div className='mt-[210px] mx-[46px] py-[54px] px-[57px] bg-white rounded-[30px]'>
+                        <div className='mt-[165px] py-[54px] px-[57px] bg-white rounded-[30px] ' style={{ boxShadow: '0px 0px 10px rgba(167, 167, 167, 0.25)' }}>
                             <div className='flex flex-row gap-2'>
                                 <div className='w-[18px] h-[20px] relative'>
                                     <Image src={item.icon} fill alt="icon"/>
@@ -35,7 +35,7 @@ const BlogPost = () => {
                                 </div>
                                 <h6 className='font-roboto text-lg font-normal'>By {item.author}</h6>
                             </div>
-                            <h6 className='pt-[19px]'>{item.title}</h6>
+                            <h6 className='pt-[19px] leading-normal'>{item.title}</h6>
                             <p>{item.subTitle}</p>
                            <div className='pt-[19px] flex items-center gap-[9px]'>
                            <h6 className='font-roboto text-[20px] font-bold leading-normal text-sea_green'>Read More</h6>
@@ -43,6 +43,7 @@ const BlogPost = () => {
                             </div>
                         </div>
 
+                    </div>
                     </div>
 
 

@@ -26,3 +26,27 @@ export interface IRelatedProduct extends Array<{
     discountPrice: string;
 }> {}
 
+export interface IBlogPost {
+    id: number,
+    author:string,
+    img:string,
+    icon:string,
+    date:string,
+    month:string,
+    posted:string,
+    title:string,
+    subTitle:string,
+}
+
+export interface IBlogPostSingle extends Array<{
+    id: number,
+    author:string,
+    img:string,
+    icon:string,
+    date:string,
+    month:string,
+    posted:string,
+    title:string,
+    subTitle:string,
+
+}>{}
