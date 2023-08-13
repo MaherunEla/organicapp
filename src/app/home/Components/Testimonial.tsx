@@ -41,7 +41,7 @@ const Testimonial = () => {
                 </SwiperSlide>
             </Swiper>
 
-           
+            <hr className='bg-green'></hr>
             <div className='pt-[102px] flex gap-[62px]'>
                 <div className='w-[211px] h-[211px] rounded-full border-2  border-green bg-[#F1F1F1] flex flex-col items-center justify-center'>
                     <h2>100%</h2>
