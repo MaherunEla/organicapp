@@ -1,5 +1,6 @@
 import React from 'react'
 import { PortfolioProjectData } from './PortfolioProjectData'
+import {RiArrowRightSLine} from 'react-icons/ri'
 import Image from 'next/image'
 
 const PortfolioProject = () => {
@@ -9,10 +10,20 @@ const PortfolioProject = () => {
         {
           PortfolioProjectData.map((item,index)=>(
             <div key={index}>
-              <div className='w-[451px] h-[421px] relative'>
-              <Image 
-                className='rounded-[30px]'
-                src={item.img} fill alt="project"/>
+              <div  style={{
+            background:`url(${item?.img}) no-repeat  `,
+            backgroundColor:'#F9F8F8',
+            backgroundPosition: 'center', 
+            backgroundSize: 'cover',
+            borderRadius: '30px',  
+        }} className="w-[451px] h-[421px] flex items-center justify-center ">
+          <div className=' w-[401px] h-[375px] rounded-[30px] flex items-center justify-center bg-white text-white opacity-90'>
+            <div className='bg-green h-[46px] w-[46px] flex items-center justify-center rounded-full'>
+              <RiArrowRightSLine size={20} />
+            </div>
+
+          </div>
+             
 
 
               </div>

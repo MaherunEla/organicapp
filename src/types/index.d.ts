@@ -38,6 +38,13 @@ export interface IBlogPost {
     subTitle:string,
 }
 
+export interface IPortfolio {
+    id:number,
+    img:string,
+    title:string,
+    subTitle:string,
+}
+
 export interface IBlogPostSingle extends Array<{
     id: number,
     author:string,

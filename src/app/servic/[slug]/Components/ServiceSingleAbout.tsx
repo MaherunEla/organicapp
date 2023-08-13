@@ -46,6 +46,37 @@ const ServiceSingleAbout = () => {
 
 
             </div>
+            <h4 className='pt-[75px] pb-[11px]'>We farm your land</h4>
+            <p className='w-[936px]'>It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            <div className='flex gap-[28px] pt-[59px]'>
+           
+            <div className='max-w-[419px] py-[15px] pl-[17px] h-[99px] bg-cream rounded-full flex items-center  gap-[25px] '>
+                <div className='  w-[69px] h-[69px] flex items-center justify-center rounded-full bg-green '>
+                    <h6 className='text-white'>01</h6>
+                   
+                    </div>
+                    <h6 className='pr-[53px]'>Best quality support</h6>
+
+            </div>
+
+           
+            
+           
+            <div className='flex gap-[28px] '>
+            <div className='max-w-[419px] py-[15px] pl-[17px] h-[99px] bg-cream rounded-full flex items-center  gap-[25px] '>
+                <div className='  w-[69px] h-[69px] flex items-center justify-center rounded-full bg-green '>
+                    <h6 className='text-white'>02</h6>
+                   
+                    </div>
+                    <h6 className='pr-[53px]'>Money back guarantee</h6>
+
+            </div>
+            </div>
+            
+
+           
+            </div>
+
 
 
         </div>

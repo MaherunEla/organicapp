@@ -1,4 +1,4 @@
-import Center from "@/Components/Shared/Center";
+
 
 import React from "react";
 
@@ -8,7 +8,7 @@ import Farms from "./Components/Farms";
 const page = () => {
   return (
     <div>
-      <Center />
+   
       <ContactAbout/>
       <Farms/>
       
