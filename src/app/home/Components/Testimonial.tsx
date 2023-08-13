@@ -9,6 +9,7 @@ const Testimonial = () => {
         <div className='flex flex-col items-center justify-center py-[164px]'>
             <h4 className='yellow text-green'>Testimonial</h4>
             <h2 className='pb-[60px]'>What Our Customer Saying?</h2>
+           
             <Swiper 
             spaceBetween={50}
             slidesPerView={1}
@@ -40,8 +41,9 @@ const Testimonial = () => {
                    
                 </SwiperSlide>
             </Swiper>
-
-            <hr className='bg-green'></hr>
+            
+     
+            
             <div className='pt-[102px] flex gap-[62px]'>
                 <div className='w-[211px] h-[211px] rounded-full border-2  border-green bg-[#F1F1F1] flex flex-col items-center justify-center'>
                     <h2>100%</h2>
