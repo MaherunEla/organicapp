@@ -17,7 +17,7 @@
 
   }
   h2{
-    @apply font-roboto text-sea_green text-[50px] font-extrabold leading-[50px];
+    @apply font-roboto text-sea_green text-[36px] xl:text-[50px] font-bold xl:font-extrabold leading-[50px];
 
   }
   h3{
@@ -33,11 +33,11 @@
 
   }
   h6{
-    @apply font-roboto text-sea_green lg:text-xl xl:text-[25px] font-extrabold ;
+    @apply font-roboto text-sea_green text-xl xl:text-[25px] font-semibold xl:font-extrabold ;
 
   }
   p{
-    @apply font-open_sen text-sea_green text-lg font-normal leading-[29.7px];
+    @apply font-open_sen text-sea_green text-[14px] xl:text-lg font-normal leading-[29.7px];
   }
   .quotes{
     @apply font-open_sen text-sea_green text-xl font-bold leading-[33px];
@@ -61,7 +61,12 @@
 
 .container {
   margin:0 auto;
-  width: calc(100% - 80px);
+  width: calc(100% - 23px);
   max-width:1595px;
+}
+@media (min-width:960px){
+  .container{
+    width:calc(100% - 80px);
+  }
 }
 
