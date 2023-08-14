@@ -10,18 +10,18 @@ const Form : React.FC = () => {
   }
   return (
     <div className='container flex items-center justify-center '>
-      <form onSubmit={handleSubmit} className=' flex flex-col gap-[50px] ' >
-       <div className='flex gap-5'>
-        <div className=' max-w-[569px]'>
+      <form onSubmit={handleSubmit} className=' flex flex-col gap-[20px]  xl:gap-[50px] ' >
+       <div className='flex flex-col xl:flex-row gap-5'>
+        <div className='w-[327px] xl:max-w-[569px]'>
           
        <label ><p className='font-semibold pb-[26px]'>Full Name*</p></label>
-        <input type="text" className='font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[300px] border border-green rounded-[16px]' placeholder='Your Name Here' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
+        <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[24px] xl:py-[28px]  xl:pr-[300px] border border-green rounded-[16px]' placeholder='Your Name Here' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
         </div>
 
-        <div className='max-w-[569px]'>
+        <div className='w-[327px] xl:max-w-[569px]'>
           
           <label ><p className='font-semibold pb-[26px]'>Your Email*</p></label>
-           <input type="text" className='font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[300px] border border-green rounded-[16px]' placeholder='example@yourmail.com' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
+           <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[100px] xl:pr-[300px] border border-green rounded-[16px]' placeholder='example@yourmail.com' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
            </div>
         
         
@@ -29,17 +29,17 @@ const Form : React.FC = () => {
          
        </div>
 
-       <div className='flex gap-5'>
-        <div className=' max-w-[569px]'>
+       <div className='flex flex-col xl:flex-row gap-5'>
+        <div className=' w-[327px] xl:max-w-[569px]'>
           
        <label ><p className='font-semibold pb-[26px]'>Company*</p></label>
-        <input type="text" className='font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[300px] border border-green rounded-[16px]' placeholder='yourcompany name here' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
+        <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[28px]  xl:pr-[300px] border border-green rounded-[16px]' placeholder='yourcompany name here' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
         </div>
 
-        <div className='max-w-[569px]'>
+        <div className='w-[327px] xl:max-w-[569px]'>
           
           <label ><p className='font-semibold pb-[26px]'>Subject*</p></label>
-           <input type="text" className='font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[300px] border border-green rounded-[16px]' placeholder='how can we help' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
+           <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[28px]  xl:pr-[300px] border border-green rounded-[16px]' placeholder='how can we help' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
            </div>
         
         
@@ -47,7 +47,7 @@ const Form : React.FC = () => {
          
        </div>
 
-       <div className='max-w-[1138px]'>
+       <div className='w-[327px] xl:max-w-[1138px]'>
         <label htmlFor='textArea'><p className='font-semibold pb-[26px]'>Message*</p></label>
         <textarea 
         id="textArea"

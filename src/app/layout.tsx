@@ -30,7 +30,7 @@ export default function RootLayout({ children }:{children:ReactElement}) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${yellowtail.variable} ${open_sens}`}>
-        {/* <Navbar/> */}
+       <Navbar/>
         {children}
         <Footer/>
         </body>

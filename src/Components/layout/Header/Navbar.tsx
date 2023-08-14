@@ -6,7 +6,7 @@ import Link from "next/link";
 import Menu from "./Menu";
 
 const Navbar = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
+ 
   const [showPageMenu, setShowPageMenu] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav className="container py-[69px] flex items-center justify-between">
         <Link href="/">
           <div className="flex flex-row gap-2">
-            <div className="w-[22px] h-[32px] lg:w-[36px] lg:h-[53px] relative">
+            <div className="w-[36px] h-[53px] relative">
               <Image src="/assets/images/Home/Logo.svg" fill alt="logo" />
             </div>
             <span className="font-roboto text-2xl lg:text-[38px] font-bold leading-normal text-sea_green">
@@ -24,8 +24,8 @@ const Navbar = () => {
         </Link>
 
         <Menu showPageMenu={showPageMenu} setShowPageMenu={setShowPageMenu} />
-        <div className="hidden lg:flex flex-row items-center  gap-[18px]">
-        <div className="w-[288px] h-[48px] lg:w-[376px] lg:h-[66px] flex items-center right-0 border border-[#FAFAFA] rounded-full bg-[#FAFAFA]">
+        <div className="flex flex-row items-center  gap-[18px]">
+        <div className=" h-[48px] w-[376px] lg:h-[66px] flex items-center right-0 border border-[#FAFAFA] rounded-full bg-[#FAFAFA]">
             <div className="w-[56px] h-[56px] relative">
                 <Image 
                 className="ml-[246px] lg:ml-[314px] "

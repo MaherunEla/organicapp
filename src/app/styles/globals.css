@@ -61,7 +61,7 @@
 
 .container {
   margin:0 auto;
-  width: calc(100% - 23px);
+  width: calc(100% - 24px);
   max-width:1595px;
 }
 @media (min-width:960px){

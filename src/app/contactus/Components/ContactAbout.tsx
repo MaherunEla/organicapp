@@ -4,9 +4,9 @@ import { BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 import { BsFacebook, BsPinterest } from "react-icons/bs";
 const ContactAbout = () => {
   return (
-    <div className="container flex flex-col items-center justify-center  py-32">
-      <div className="flex items-center justify-center gap-[75px] pb-[98px]">
-        <div className="w-[623px] h-[640px] relative">
+    <div className="container flex flex-col items-center justify-center  py-10 xl:py-32">
+      <div className="flex flex-col xl:flex-row items-center justify-center gap-[75px] pb-[98px]">
+        <div className="w-[375px] h-[350px] lg:w-[623px] lg:h-[640px] relative">
           <Image
             className="rounded-lg"
             src="/assets/images/contact/i1.jpg"
@@ -14,9 +14,9 @@ const ContactAbout = () => {
             alt="contact"
           />
         </div>
-        <div className="w-[702px] flex flex-col gap-[34px] ">
+        <div className=" xl:w-[702px] flex flex-col gap-[34px] ">
           <div>
-            <h2 className="pb-[11px]">
+            <h2 className="text-[35px] pb-[11px]">
               We'd love to talk about how we can work together.
             </h2>
             <p>
@@ -65,16 +65,16 @@ const ContactAbout = () => {
         </div>
       </div>
 
-      <div className="w-[1400px] h-[758px] bg-[url('/assets/images/contact/banner2.jpg')] bg-styles rounded-lg flex items-center justify-end pr-[108px]">
-        <div className="w-[514px] h-[514px] px-[53px] py-[46px] bg-white rounded-lg  ">
+      <div className="w-[375px] h-[505px]  xl:w-[1400px] xl:h-[758px] bg-[url('/assets/images/contact/banner2.jpg')] bg-styles rounded-lg flex items-center justify-center xl:justify-end xl:pr-[108px]">
+        <div className="w-[327px] h-[425px] xl:w-[514px] xl:h-[514px] px-5 py-5 xl:px-[53px] xl:py-[46px] bg-white rounded-lg  ">
           <h4 className="yellow">Location</h4>
-          <h2 className="pb-[10]">Our Farms</h2>
+          <h2 className="text-[36px] pb-[10]">Our Farms</h2>
           <p className="pb-[19px]">
             Established fact that a reader will be distracted by the readable
             content of a page when looking a layout. The point of using.
           </p>
           <div className="pb-[22px] flex gap-[6px]">
-            <div className="w-[50px] h-[50px] relative">
+            <div className="w-[40px] h-[40px]  xl:w-[50px] xl:h-[50px] relative">
             <Image
              
              src="/assets/images/contact/icon3.png"
@@ -91,7 +91,7 @@ const ContactAbout = () => {
           </div>
 
           <div className="flex gap-[6px]">
-            <div className="w-[50px] h-[50px] relative">
+            <div className="w-[40px] h-[40px]  xl:w-[50px] xl:h-[50px] relative">
             <Image
              
              src="/assets/images/contact/icon3.png"
