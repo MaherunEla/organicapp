@@ -13,7 +13,7 @@
 
   }
   h1{
-    @apply font-roboto text-sea_green text-[70px] font-extrabold leading-normal;
+    @apply font-roboto text-sea_green text-[44px] xl:text-[70px] font-extrabold leading-normal;
 
   }
   h2{
@@ -43,7 +43,7 @@
     @apply font-open_sen text-sea_green text-xl font-bold leading-[33px];
   }
   .yellow{
-    @apply font-yellowtail text-green text-[36px] font-normal leading-normal;
+    @apply font-yellowtail text-green text-[28px] lg:text-[36px] font-normal leading-normal;
   }
   .sb{
     @apply border border-red-500;

@@ -3,14 +3,16 @@
 import React from "react";
 
 import ContactAbout from "./Components/ContactAbout";
-import Farms from "./Components/Farms";
+import Form from "./Components/Form";
+import Subscribe from "@/Components/Shared/Subsribe";
 
 const page = () => {
   return (
     <div>
    
       <ContactAbout/>
-      <Farms/>
+      <Form/>
+      <Subscribe/>
       
     </div>
     

@@ -12,7 +12,7 @@ const BlogSingleHero = ({Blog}:Props) => {
     backgroundImage: `url(${Blog?.img})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
+    backgroundPosition: 'center 10%',
     
   };
   const divStyle: React.CSSProperties = {
@@ -21,8 +21,8 @@ const BlogSingleHero = ({Blog}:Props) => {
   };
   return (
    <div className='h-[1120px]'>
-    <div style={containerStyle} className=' w-screen h-[898px] pt-[730px] '>
-                      <div style={divStyle} className='container max-w-[1400px] px-[82px] py-[76px] h-[385px] bg-white rounded-[30px] '>
+    <div style={containerStyle} className=' w-screen h-[898px] relative'>
+                      <div style={divStyle} className='container absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 max-w-[1400px] px-[82px] py-[76px] bg-white rounded-[30px] '>
                         <div className='flex gap-[30px] pb-5'>
 
                         <p><span className='font-semibold'>Posted On:</span> {Blog?.posted}</p>

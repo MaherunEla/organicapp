@@ -2,6 +2,7 @@ import React from 'react'
 import { PortfolioProjectData } from './PortfolioProjectData'
 import {RiArrowRightSLine} from 'react-icons/ri'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const PortfolioProject = () => {
   return (
@@ -9,7 +10,8 @@ const PortfolioProject = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {
           PortfolioProjectData.map((item,index)=>(
-            <div key={index}>
+            <Link href={`/portfolio/${item.id}`}  key={index}>
+            <div>
               <div  style={{
             background:`url(${item?.img}) no-repeat  `,
             backgroundColor:'#F9F8F8',
@@ -31,6 +33,7 @@ const PortfolioProject = () => {
               <h6 className='pt-[18px]'>{item.title}</h6>
               <h6 className='yellow text-[22px]'>{item.subTitle}</h6>
             </div>
+            </Link>
           ))
         }
 

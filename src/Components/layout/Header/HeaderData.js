@@ -22,12 +22,12 @@ export const Data = [
     {
         id:5,
         name:"Projects",
-        url:"/"
+        url:"/portfolio"
     },
     {
         id:6,
         name:"News",
-        url:"/"
+        url:"/blog"
     },
 ]
 

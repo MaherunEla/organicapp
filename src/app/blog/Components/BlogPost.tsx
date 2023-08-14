@@ -2,6 +2,7 @@ import React from 'react'
 import { BlogPostData } from './BlogPostData'
 import Image from 'next/image'
 import {BsArrowRightShort} from 'react-icons/bs'
+import Link from 'next/link'
 
 const BlogPost = () => {
   return (
@@ -9,7 +10,8 @@ const BlogPost = () => {
         <div className=' grid grid-cols-1 lg:grid-cols-2 gap-[46px]'>
             {
                 BlogPostData.map((item,index)=>(
-                    <div className='w-full xl:w-[677px] h-[589px]'   key={index}>
+                    <Link href={`/blog/${item.id}`} key={index}>
+                    <div className='w-full xl:w-[677px] h-[589px]'   >
                     <div style={{
                         background:`url(${item?.img}) no-repeat  `,
                         backgroundColor:'#F9F8F8',
@@ -45,6 +47,7 @@ const BlogPost = () => {
 
                     </div>
                     </div>
+                    </Link>
 
 
                 ))

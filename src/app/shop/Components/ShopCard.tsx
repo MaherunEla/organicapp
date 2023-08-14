@@ -2,15 +2,16 @@ import React from 'react'
 import { ShopCardData } from './ShopCardData'
 import Image from 'next/image'
 import {AiFillStar} from 'react-icons/ai'
-
+import Link from 'next/link'
 const ShopCard = () => {
   return ( 
     <div className='container flex items-center justify-center pt-[90px]'>
         <div className='grid grid-cols-1 sm:grid-cols-2 ld:grid-cols-3 xl:grid-cols-4 gap-5 '>
             {
                 ShopCardData.map((item,index)=>(
-                    <div className=' w-[335px] pb-[17px]  bg-cream rounded-[30px]' key={index}>
-                        <div className='mt-[30px] ml-[30px] mr-[25px] max-w-[96px] py-[8px] px-3 bg-sea_green rounded-[8px]'>
+                    <Link href={`/shop/${item.id}` } key={index}>
+                         <div className=' w-[335px] pb-[17px] pt-[30px] bg-cream rounded-[30px]'>
+                        <div className=' ml-[30px] mr-[25px] max-w-[96px] py-[8px] px-3 bg-sea_green rounded-[8px]'>
                             <h6 className='font-open_sens text-[15px] text-[#FFF] text-center font-normal tracking-[1px] '>{item.title}</h6>
                         </div>
                         <div className='w-[335px] h-[324px] relative'>
@@ -37,6 +38,8 @@ const ShopCard = () => {
 
 
                     </div>
+                    </Link>
+                   
                 ))
             }
 
