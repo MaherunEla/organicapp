@@ -16,22 +16,22 @@ const ShopSingleCart = ({ product,RelatedProduct }: Props) => {
   if(!RelatedProduct) return <div>Not Found</div>
   
   return (
-    <div className="container flex flex-col  items-center justify-center pt-[133px]">
-      <div className="flex items-center justify-center gap-[43px]">
+    <div className="container flex flex-col  items-center justify-center pt-[48px] xl:pt-[133px]">
+      <div className="flex flex-col xl:flex-row  items-center justify-center gap-[28px] xl:gap-[43px]">
         <div style={{
             background:`url(${product?.img}) no-repeat  `,
             backgroundColor:'#F9F8F8',
             backgroundPosition: 'center', 
             backgroundSize: 'cover',
-            borderRadius: '30px',  
-        }} className={`w-[591px] h-[563px] bg-styles`}>
-             <div className=' m-10  max-w-[96px] py-[8px] px-3 bg-sea_green rounded-[8px]'>
+           
+        }} className={`w-[331px] h-[373px] xl:w-[591px] xl:h-[563px] bg-styles rounded-[12px] xl:rounded-[30px]`}>
+             <div className='m-[20px] xl:m-10 max-w-[96px] py-[6px] px-[10px] xl:py-[8px] xl:px-3 bg-sea_green rounded-[8px]'>
                             <h6 className='font-open_sens text-[15px] text-[#FFF] text-center font-normal tracking-[1px] '>{product?.title}</h6>
                         </div>
 
           
         </div>
-        <div className="max-w-[658px]">
+        <div className="w-full xl:max-w-[658px]">
           <h4 className="font-semibold">Health Pistachios</h4>
           <div className="flex  text-[#FFA858] pb-[9px]">
             <AiFillStar />
@@ -44,16 +44,20 @@ const ShopSingleCart = ({ product,RelatedProduct }: Props) => {
             <p className="line-through">{product.price}</p>
             <p className="font-bold">{product.discountPrice}</p>
           </div>
-          <p>
+          <p className="text-base font-normal">
             Simply dummy text of the printing and typesetting industry. Lorem
             had ceased to been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley.
           </p>
 
-          <div className="flex items-center gap-5 pt-[35px]">
+          <div className="flex flex-col xl:flex-row xl:items-center gap-5 pt-[35px]">
             <h6 className="text-[20px] font-bold">Quantity :</h6>
+            <div className="flex gap-5">
             <h6 className="w-[134px] h-[80px] flex items-center justify-center border border-sea_green rounded-[16px] text-[20px] font-bold">1</h6>
             <Button title="Add to Cart"/>
+
+            </div>
+            
             
 
 
@@ -61,7 +65,7 @@ const ShopSingleCart = ({ product,RelatedProduct }: Props) => {
         </div>
       </div>
 
-      <div className="flex pt-[72px] gap-5">
+      <div className="flex flex-col xl:flex-row pt-[72px] gap-5">
         <h6 className="py-[23px] px-[57px] rounded-[16px] border border-sea_green bg-sea_green font-open_sen text-white font-semibold">Product Description</h6>
         <h6 className="py-[23px] px-[57px] rounded-[16px] border border-very_light_green bg-very_light_green font-open_sen text-sea_green font-semibold">Product Description</h6>
 

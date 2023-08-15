@@ -18,8 +18,8 @@ const PortfolioProject = () => {
             backgroundPosition: 'center', 
             backgroundSize: 'cover',
             borderRadius: '30px',  
-        }} className="w-[451px] h-[421px] flex items-center justify-center ">
-          <div className=' w-[401px] h-[375px] rounded-[30px] flex items-center justify-center bg-white text-white opacity-90'>
+        }} className="w-[327px] h-[350px] xl:w-[451px] xl:h-[421px] flex items-center justify-center ">
+          <div className='w-[290px] h-[311px] xl:w-[401px] xl:h-[375px] rounded-[30px] flex items-center justify-center bg-white text-white opacity-90'>
             <div className='bg-green h-[46px] w-[46px] flex items-center justify-center rounded-full'>
               <RiArrowRightSLine size={20} />
             </div>

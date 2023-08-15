@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const BlogPost = () => {
   return (
-    <div className='container flex items-center justify-center pt-[117px] '>
+    <div className='container flex items-center justify-center pt-[37px] xl:pt-[117px] '>
         <div className=' grid grid-cols-1 lg:grid-cols-2 gap-[46px]'>
             {
                 BlogPostData.map((item,index)=>(

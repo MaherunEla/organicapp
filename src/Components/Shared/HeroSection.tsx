@@ -9,7 +9,7 @@ const HeroSection = (props: {title:string; backgroundimg:string}) => {
     
   };
   return (
-    <div style={containerStyle} className='flex justify-center items-center w-screen h-[450px] '>
+    <div style={containerStyle} className='flex justify-center items-center w-full xl:w-screen h-[450px] '>
       <h1>{props.title}</h1>
 
     </div>

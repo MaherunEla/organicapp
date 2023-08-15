@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div>
          <div className="container flex items-center justify-center py-10">
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-col xl:flex-row gap-10">
         <div className="flex flex-col">
           <h5 className="text-sea_green text-right">Contact Us</h5>
           <p className="font-bold text-dark_gray text-right">Email</p>
@@ -22,7 +22,7 @@ const Footer = () => {
             88 road, borklyn street, USA
           </p>
         </div>
-        <div className=" flex flex-col flex-1 w-[583px] border-r-2 border-gray border-l-2 items-center ">
+        <div className=" flex flex-col flex-1 w-[583px] xl:border-r-2 xl:border-gray xl:border-l-2 items-center ">
           <Link href="/">
             <div className="flex flex-row gap-2">
               <div className="w-[22px] h-[32px] lg:w-[36px] lg:h-[53px] relative">
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="w-full h-[40px] border-t-2 border-gray">
+    <div className="w-full h-[40px] xl:border-t-2 xl:border-gray">
         <p className="text-dark_gray text-center ">Copyright © <span className="font-bold">Organick</span> | Designed by <span className="font-bold">VictorFlow</span> Templates - Powered by <span className="font-bold">Webflow</span></p>
 
 

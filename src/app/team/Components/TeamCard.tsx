@@ -18,10 +18,10 @@ const TeamCard = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[27px]'>
             {
                 TeamCardData.map((item,index)=>(
-                    <div className='w-[449px] h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)]  rounded-[30px] ' key={index}>
-                    <div className='w-[449px] h-[485px] relative'>
+                    <div className='w-[327px] h-[466px] xl:w-[449px] xl:h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)]  rounded-[12px] xl:rounded-[30px] ' key={index}>
+                    <div className='w-[327px] h-[350px] xl:w-[449px] xl:h-[485px] relative'>
                         <Image 
-                        className="rounded-t-[30px]"
+                        className="rounded-t-[12px] xl:rounded-t-[30px]"
                         src={item.img} fill alt="team"/>
 
                     </div>

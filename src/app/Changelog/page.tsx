@@ -1,12 +1,13 @@
-import Pattern from '@/Components/Shared/Pattern'
+
 import Subscribe from '@/Components/Shared/Subscribe'
 import Image from 'next/image'
 import React from 'react'
+import CheckOutHero from './components/CheckOutHero'
 
 const page = () => {
   return (
     <div>
-        <Pattern data="Changelog"/>
+      <CheckOutHero/>
         <div className='container flex items-center justify-center py-[73px]'>
             <div className='w-[705px] h-[216px] border rounded-lg border-white shadow-2xl flex flex-row items-center justify-center gap-[30px]'>
                 <div className='w-[164px] h-[164px] relative'>
