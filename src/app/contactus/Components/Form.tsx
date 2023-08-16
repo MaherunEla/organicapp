@@ -18,10 +18,10 @@ const Form : React.FC = () => {
         <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[24px] xl:py-[28px]  xl:pr-[300px] border border-green rounded-[16px]' placeholder='Your Name Here' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
         </div>
 
-        <div className='w-[327px] xl:max-w-[569px]'>
+        <div className='w-[327px] xl:w-[569px] '>
           
           <label ><p className='font-semibold pb-[26px]'>Your Email*</p></label>
-           <input type="text" className='w-full font-roboto text-lg italic font-normal pl-[23px] py-[28px]  pr-[100px] xl:pr-[300px] border border-green rounded-[16px]' placeholder='example@yourmail.com' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
+           <input type="text" className='w-full h-[60px] px-5 font-roboto text-lg italic font-normal border border-green rounded-[16px]' placeholder='example@yourmail.com' value={inputValue} onChange={(e)=>setInputValue(e.target.value)} required />
            </div>
         
         

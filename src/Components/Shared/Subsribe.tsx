@@ -3,9 +3,9 @@ import React from "react";
 
 const Subscribe = () => {
   return (
-    <div className="container flex items-center justify-center pt-[60px] xl:pt-[114px] pb-[117px]">
+    <div className="md:container pt-[60px] xl:pt-[114px] pb-[117px]">
       <div
-        className={`bg-[url('/assets/images/Home/Photo.jpg')]  rounded-3xl bg-styles w-full h-[450px] xl:w-[1400px]  xl:h-[323px] flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:px-[71px] xl:py-[105px]`}
+        className={`bg-[url('/assets/images/Home/Photo.jpg')] rounded-3xl bg-styles w-full h-[450px] flex justify-center md:justify-between items-center flex-col md:flex-row px-6 md:px-[71px]`}
       >
         <h2 className="w-full text-center  xl:text-start  lg:w-[357px] text-white ">Subscribe to our Newsletter</h2>
 
