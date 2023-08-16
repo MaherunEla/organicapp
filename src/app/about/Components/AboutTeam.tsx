@@ -84,14 +84,14 @@ const AboutTeam = () => {
         <p className='pb-[41px] w-full xl:w-[852px] text-center text-dark_gray'>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[27px]'>
             
-                    <div className='w-[449px] h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
-                        <div className='w-[449px] h-[485px] relative'>
+                    <div className='w-[327px] h-[446px] xl:w-[449px] xl:h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[12px] xl:rounded-[30px] '>
+                        <div className='w-full xl:w-[449px] h-[350px] xl:h-[485px] relative'>
                             <Image 
-                            className="rounded-t-[30px]"
+                            className="rounded-t-[12px] xl:rounded-t-[30px]"
                             src={aboutTeamData1.img} fill alt="team"/>
 
                         </div>
-                        <div className='flex py-[35px] px-[28px] justify-between'>
+                        <div className='flex py-5 px-[10px] xl:py-[35px] xl:px-[28px] justify-between'>
                             <div>
                             <h6>{aboutTeamData1.title}</h6>
                         <h6 className='yellow text-[22px]'>{aboutTeamData1.profession}</h6>
@@ -108,14 +108,14 @@ const AboutTeam = () => {
 
                     </div>
 
-                    <div className='w-[449px] h-[615px] bg-cream  hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
-                        <div className='w-[449px] h-[485px] relative'>
+                    <div className='w-[327px] h-[446px] xl:w-[449px] xl:h-[615px] bg-cream  hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[12px] xl:rounded-[30px] '>
+                        <div className='w-full xl:w-[449px] h-[350px] xl:h-[485px] relative'>
                             <Image 
-                            className="rounded-t-[30px]"
+                            className="rounded-t-[12px] xl:rounded-t-[30px]"
                             src={aboutTeamData2.img} fill alt="team"/>
 
                         </div>
-                        <div className=' flex py-[35px] px-[28px] justify-between'>
+                        <div className=' flex py-5 px-[10px] xl:py-[35px] xl:px-[28px] justify-between'>
                             <div>
                             <h6>{aboutTeamData1.title}</h6>
                         <h6 className='yellow text-[22px]'>{aboutTeamData1.profession}</h6>
@@ -133,14 +133,14 @@ const AboutTeam = () => {
 
                     </div>
 
-                    <div className='w-[449px] h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[30px] '>
-                        <div className='w-[449px] h-[485px] relative'>
+                    <div className='w-[327px] h-[446px] xl:w-[449px] xl:h-[615px] bg-cream hover:bg-white hover:drop-shadow-[0_29px_44px_rgba(150,150,150,0.25)] rounded-[12px] xl:rounded-[30px] '>
+                        <div className='w-full xl:w-[449px] h-[350px] xl:h-[485px] relative'>
                             <Image 
-                            className="rounded-t-[30px]"
+                            className="rounded-t-[12px] xl:rounded-t-[30px]"
                             src={aboutTeamData3.img} fill alt="team"/>
 
                         </div>
-                        <div className='flex py-[35px] px-[28px] justify-between'>
+                        <div className='flex py-5 px-[10px] xl:py-[35px] xl:px-[28px] justify-between'>
                             <div>
                             <h6>{aboutTeamData3.title}</h6>
                         <h6 className='yellow text-[22px]'>{aboutTeamData1.profession}</h6>

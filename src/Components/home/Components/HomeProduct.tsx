@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const HomeProduct = () => {
   return (
-    <div className="bg-sea_green h-[1050px]">
+    <div className="bg-sea_green xl:h-[1050px]">
       <div className="container flex flex-col items-center justify-center  py-[59px] xl:py-[200px]">
-        <div className="pb-[50px] flex items-center gap-[500px]">
+        <div className="pb-[50px] flex flex-col xl:flex-row items-center gap-10 xl:gap-[500px]">
           <div>
             <h4 className="text-green yellow">Offer</h4>
             <h2 className="text-white">We Offer Organic For You</h2>

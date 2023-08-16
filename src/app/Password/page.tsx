@@ -1,11 +1,12 @@
 import React from 'react'
-import Pattern from '@/Components/Shared/Pattern'
+
 import Image from 'next/image'
-import Subscribe from '@/Components/Shared/Subscribe'
+import Subscribe from '@/Components/Shared/Subsribe'
+
 const page = () => {
   return (
    <>
-   <Pattern data="Protected Page"/>
+   
    <div className='container flex items-center justify-center py-[73px]'>
     <div className='w-[856px] h-[351px] border rounded-lg border-white shadow-2xl flex flex-row items-center justify-center gap-4'>
         <div className='w-[200px] h-[280px] relative'>

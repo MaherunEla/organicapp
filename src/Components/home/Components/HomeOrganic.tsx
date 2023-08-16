@@ -7,13 +7,13 @@ import { BlogPostData } from "@/app/blog/Components/BlogPostData";
 const HomeOrganic = () => {
   const news = BlogPostData.slice(0, 2);
   return (
-    <div>
-      <div className="flex">
-        <div className="w-[952px] h-[931px] relative">
+    <div >
+      <div className="pt-[60px] xl:pt-0 flex flex-col xl:flex-row">
+        <div className="w-full h-[510px]  xl:w-[952px] xl:h-[931px] relative">
           <Image src="/assets/images/Home/eco.png" fill alt="home" />
         </div>
         <div>
-          <div className=" my-[104px] w-[789px] h-[723px] px-[89px] py-[78px] bg-white border border-white rounded-[30px] ">
+          <div className=" xl:my-[104px] xl:w-[789px] xl:h-[723px] xl:px-[89px] xl:py-[78px] bg-white border border-white rounded-[30px] ">
             <h4 className="yellow">Eco Friendly</h4>
             <h2>Econis is a Friendly Organic Store</h2>
             <h5 className="pt-[35px]">Start with Our Company First</h5>
@@ -35,31 +35,31 @@ const HomeOrganic = () => {
         </div>
       </div>
 
-      <div className="bg-[#F1F8F4] h-[957px] py-[187px] flex gap-[42px]">
-        <div className="w-[612px] h-[583px] bg-[url('/assets/images/Home/juice.jpg')] bg-styles flex items-center justify-center">
+      <div className="bg-[#F1F8F4] h-[957px] xl:py-[187px] flex flex-col xl:flex-row gap-7 xl:gap-[42px]">
+        <div className="w-full xl:w-[612px] h-[583px] bg-[url('/assets/images/Home/juice.jpg')] bg-styles flex items-center justify-center">
           <div className="bg-white rounded-[20px] max-w-[320px]  px-[60px] py-[33px] ">
             <h6>Organic Juice</h6>
           </div>
         </div>
 
-        <div className="w-[612px] h-[583px] bg-[url('/assets/images/Home/food.jpg')] bg-styles flex items-center justify-center">
+        <div className="w-full xl:w-[612px] h-[583px] bg-[url('/assets/images/Home/food.jpg')] bg-styles flex items-center justify-center">
           <div className="bg-white rounded-[20px] max-w-[320px]  px-[60px] py-[33px] ">
             <h6>Organic Food</h6>
           </div>
         </div>
 
-        <div className="w-[612px] h-[583px] bg-[url('/assets/images/Home/cookies.jpg')] bg-styles flex items-center justify-center">
+        <div className="w-full xl:w-[612px] h-[583px] bg-[url('/assets/images/Home/cookies.jpg')] bg-styles flex items-center justify-center">
           <div className="bg-white rounded-[20px] max-w-[320px]  px-[60px] py-[33px] ">
             <h6>Nuts Cookis</h6>
           </div>
         </div>
       </div>
 
-      <div className="container flex flex-col items-center justify-center pt-[177px] pb-[45px]">
-        <div className="pb-[45px] flex justify-between gap-[480px]">
+      <div className="container flex flex-col items-center justify-center pt-[60px] xl:pt-[177px] pb-[45px]">
+        <div className="pb-[45px] flex flex-col items-center justify-center xl:flex-row xl:justify-between xl:gap-[480px]">
           <div>
-            <h4 className="yellow">News</h4>
-            <h2 className="max-w-[702px]">
+            <h4 className="yellow text-center xl:text-start">News</h4>
+            <h2 className="max-w-[702px] text-[32px] text-center xl:text-start">
               Discover weekly content about organic food, & more
             </h2>
           </div>
@@ -68,7 +68,7 @@ const HomeOrganic = () => {
           </div>
         </div>
 
-        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-[46px]">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 xl:gap-[46px]">
           {news.map((item, index) => (
             <div className="w-full xl:w-[677px] h-[589px]" key={index}>
               <div
@@ -89,7 +89,7 @@ const HomeOrganic = () => {
                 </div>
 
                 <div
-                  className="mt-[165px] py-[54px] px-[57px] bg-white rounded-[30px] "
+                  className="mt-[165px] px-[20px] py-[30px] xl:py-[54px] xl:px-[57px] bg-white rounded-[30px] "
                   style={{
                     boxShadow: "0px 0px 10px rgba(167, 167, 167, 0.25)",
                   }}

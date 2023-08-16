@@ -17,7 +17,7 @@ const Testimonial = () => {
             onSwiper={(swiper)=>console.log(swiper)}
             >
                 <SwiperSlide>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='container flex flex-col items-center justify-center'>
                         <div className='w-[115px] h-[115px] relative'>
                             <Image 
                             className='rounded-full'
@@ -32,7 +32,7 @@ const Testimonial = () => {
                                 <AiFillStar/>
 
                             </div>
-                            <p className='xl:max-w-[780px] text-center pt-[25px]'>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                            <p className='w-full xl:max-w-[780px] text-center pt-[25px]'>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                             <h6 className='pt-5'>Sara Taylor</h6>
                             <p className='text-[15px]'>Consumer</p>
                             <div className='pt-5'>...</div>

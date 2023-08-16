@@ -1,8 +1,9 @@
 
-import Subscribe from '@/Components/Shared/Subscribe'
+
 import Image from 'next/image'
 import React from 'react'
 import CheckOutHero from './components/CheckOutHero'
+import Subscribe from '@/Components/Shared/Subsribe'
 
 const page = () => {
   return (
@@ -23,7 +24,7 @@ const page = () => {
             </div>
 
         </div>
-        <Subscribe/>
+      <Subscribe/>
     </div>
   )
 }

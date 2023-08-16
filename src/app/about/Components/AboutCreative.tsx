@@ -4,11 +4,11 @@ import Button from "@/Components/Shared/Button";
 const AboutCreative = () => {
   return (
     <div className="pt-[68px]">
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-col xl:flex-row items-center justify-center">
         <div className="w-full h-[700px] xl:w-[1016px] xl:h-[764px] relative">
           <Image src="/assets/images/about/about.png" fill alt="image" />
         </div>
-        <div className="w-full xl:w-[671px]">
+        <div className="w-full xl:w-[671px] text-center xl:text-start ">
           <h4 className="yellow">About Us</h4>
           <h2>
             We do Creative <br></br>Things for Success
@@ -22,7 +22,7 @@ const AboutCreative = () => {
             had ceased to been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley.
           </p>
-          <div className="flex pt-[49px] pb-[58px] gap-4">
+          <div className="flex flex-col xl:flex-row pt-[49px] pb-[58px] gap-4">
             <div className="flex gap-[15px]">
               <div className="w-[46px] h-[46px] relative">
                 <Image src="/assets/images/about/about1.png" fill alt="icon"/>

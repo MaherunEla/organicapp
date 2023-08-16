@@ -1,11 +1,10 @@
-import Pattern from "@/Components/Shared/Pattern";
-import Subscribe from "@/Components/Shared/Subscribe";
+
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <Pattern data="Licenses" />
+     
       <div className="container flex flex-col w-[1255px] pl-20 py-32">
         <div className="flex   gap-[100px] ">
           <h3>Icon & Graphics</h3>
@@ -58,7 +57,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <Subscribe/>
+     
     </div>
   );
 };

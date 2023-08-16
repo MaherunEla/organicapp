@@ -7,28 +7,28 @@ import { BsFacebook, BsPinterest } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-         <div className="container flex items-center justify-center py-10">
+         <div className="container flex items-center justify-center py-[60px] xl:py-10">
       <div className="flex flex-col xl:flex-row gap-10">
-        <div className="flex flex-col">
-          <h5 className="text-sea_green text-right">Contact Us</h5>
-          <p className="font-bold text-dark_gray text-right">Email</p>
-          <p className="mb-2 text-dark_gray text-right">
-            needhelp@Organia.com{" "}
+        <div>
+          <h5 className="text-sea_green text-left xl:text-right">Contact Us</h5>
+          <p className="font-bold text-dark_gray text-left xl:text-right">Email</p>
+          <p className="mb-2 text-dark_gray  text-left xl:text-right">
+            needhelp@Organia.com
           </p>
-          <p className="font-bold text-dark_gray text-right">Phone</p>
-          <p className="mb-2 text-dark_gray text-right">666 888 888</p>
-          <p className="font-bold text-dark_gray text-right">Address</p>
-          <p className="mb-2 text-dark_gray text-right">
+          <p className="font-bold text-dark_gray  text-left xl:text-right">Phone</p>
+          <p className="mb-2 text-dark_gray  text-left xl:text-right">666 888 888</p>
+          <p className="font-bold text-dark_gray  text-left xl:text-right">Address</p>
+          <p className="mb-2 text-dark_gray  text-left xl:text-right">
             88 road, borklyn street, USA
           </p>
         </div>
-        <div className=" flex flex-col flex-1 w-[583px] xl:border-r-2 xl:border-gray xl:border-l-2 items-center ">
+        <div className="order-first xl:order-none flex flex-col flex-1 xl:w-[583px] xl:border-r-2 xl:border-gray xl:border-l-2 items-center ">
           <Link href="/">
             <div className="flex flex-row gap-2">
-              <div className="w-[22px] h-[32px] lg:w-[36px] lg:h-[53px] relative">
+              <div className="w-[36px] h-[53px] relative">
                 <Image src="/assets/images/Home/Logo.svg" fill alt="logo" />
               </div>
-              <span className="mb-[26px] font-roboto text-2xl lg:text-[38px] font-bold  leading-normal text-sea_green">
+              <span className="mb-[26px] font-roboto text-[38px] font-bold  leading-normal text-sea_green">
                 Organick
               </span>
             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             Simply dummy text of the printing and typesetting industry. Lorem
             Ipsum simply dummy text of the printing
           </p>
-          <div className="flex flex-row gap-[15px]">
+          <div className="order-3  flex flex-row gap-[15px]">
             <div className="w-[60px] h-[60px] border rounded-full border-very_light_green bg-very_light_green">
               <BiLogoInstagram className="fill-sea_green m-5 " size={20} />
             </div>
