@@ -8,7 +8,7 @@ const AboutCreative = () => {
         <div className="w-full h-[700px] xl:w-[1016px] xl:h-[764px] relative">
           <Image src="/assets/images/about/about.png" fill alt="image" />
         </div>
-        <div className="w-full xl:w-[671px] text-center xl:text-start ">
+        <div className="w-full xl:w-[671px] text-center xl:text-start px-[24px] xl:px-0">
           <h4 className="yellow">About Us</h4>
           <h2>
             We do Creative <br></br>Things for Success

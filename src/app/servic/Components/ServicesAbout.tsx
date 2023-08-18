@@ -11,8 +11,8 @@ const ServicesAbout = () => {
 
         </div>
 
-        <div className='flex items-center justify-center  '>
-          <div className='flex flex-col text-right gap-[49px] max-w-[396px] '>
+        <div className='flex flex-col xl:flex-row items-center justify-center  pb-[20px]'>
+          <div className='flex flex-col items-end justify-end gap-[49px] max-w-[396px] '>
           <div>
             <div className='w-[42px] h-[42px] relative'>
                 <Image 
@@ -53,7 +53,7 @@ const ServicesAbout = () => {
           </div>
             
             
-            <div className='w-[743px] h-[990px] relative'>
+            <div className='order-first xl:order-none w-full xl:w-[743px] h-[367px] xl:h-[990px] relative'>
               <Image src="/assets/images/servic/nuts.png" fill alt="nuts"/>
 
             </div>

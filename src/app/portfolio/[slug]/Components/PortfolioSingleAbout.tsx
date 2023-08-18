@@ -4,15 +4,17 @@ import React from 'react'
 const PortfolioSingleAbout = () => {
   return (
     <div className='container flex flex-col items-center justify-center pt-[68px]'>
-        <div className='w-[936px]'>
+        <div className='w-full xl:w-[936px]'>
         <h4 className='pb-[24px]'>About The Farm:</h4>
         <p className='pb-[40px]'>t is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
 
 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and auncover many web sites still in their infancy. Various versions have evolved over the years</p>
        
 
-<div className='w-[936px] h-[426px] relative'>
-    <Image src="/assets/images/portfolio/p1.png" fill alt="image"/>
+<div className='w-full h-[400px] xl:w-[936px] xl:h-[426px] relative'>
+    <Image 
+    className='rounded-[12px] xl:rounded-[30px]'
+    src="/assets/images/portfolio/p1.png" fill alt="image"/>
 
 </div>
 <p className='text-center pt-[19px]'>The Organic Products</p>

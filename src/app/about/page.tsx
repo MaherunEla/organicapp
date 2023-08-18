@@ -14,7 +14,11 @@ const page = () => {
          <AboutChooseUs/>
          <AboutTeam/>
          <AboutUs/>
+         
          <Subscribe/>
+
+        
+        
 
     </div>
    

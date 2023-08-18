@@ -20,7 +20,7 @@ const PortfolioSingleHero = ({portfolio}:Props) => {
       };
   return (
     <div className='h-[1120px]'>
-    <div style={containerStyle} className=' w-screen h-[898px] pt-[730px] '>
+    <div style={containerStyle} className='w-full xl:w-screen h-[898px] pt-[730px] '>
                       <div style={divStyle} className='container max-w-[1400px]   h-[385px] flex bg-white rounded-[30px] '>
                         <div className='flex-none max-w-[891px] px-[82px] py-[97px] '>
                             <h1>Black Raspberry</h1>
