@@ -1,38 +1,281 @@
 export const HomeProductData = [
-    {
-        id:1,
-        slug:"brocoli",
-        title:"Vegetable",
-        img:"/assets/images/Home/brocoli2.png",
-        subTitle:"Mung Bean",
-        price:"$20.00",
-        discountPrice:"$11.00"
+  {
+    id: 1,
+    slug: "brocoli",
+    title: "Vegetable",
+    img: "/assets/images/Home/brocoli2.png",
+    subTitle: "Mung Bean",
+    price: "$20.00",
+    discountPrice: "$11.00",
+  },
+  {
+    id: 2,
+    slug: "bananaa",
+    title: "Vegetable",
+    img: "/assets/images/Home/zukini.png",
+    subTitle: "Brown Hazelnut",
+    price: "$20.00",
+    discountPrice: "$14.00",
+  },
+  {
+    id: 3,
+    slug: "whitenuts",
+    title: "Vegetable",
+    img: "/assets/images/Home/onion.png",
+    subTitle: "Onion",
+    price: "$20.00",
+    discountPrice: "$15.00",
+  },
+  {
+    id: 4,
+    slug: "tomatoo",
+    title: "Vegetable",
+    img: "/assets/images/Home/cabbage.png",
+    subTitle: "Cabbage",
+    price: "$20.00",
+    discountPrice: "$17.00",
+  },
+];
+
+export const products = [
+  {
+    id: 1,
+    image: "/assests/images/home/brocoli.png",
+    name: "Calabrese Broccoli",
+    slug: "calabrese_broccoli",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 13.0,
+    star: 5,
+    category: {
+      name: "Vegetable",
+      slug: "vegetable",
     },
-    {
-        id:2,
-        slug:"bananaa",
-        title:"Vegetable",
-        img:"/assets/images/Home/zukini.png",
-        subTitle:"Brown Hazelnut",
-        price:"$20.00",
-        discountPrice:"$14.00"
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 2,
+    image: "/assests/images/home/bananaa.png",
+    name: "Fresh Banana Fruites",
+    slug: "fresh_banana_fruites",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 14.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
     },
-    {
-        id:3,
-        slug:"whitenuts",
-        title:"Vegetable",
-        img:"/assets/images/Home/onion.png",
-        subTitle:"Onion",
-        price:"$20.00",
-        discountPrice:"$15.00"
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 3,
+    image: "/assests/images/home/whiteNuts.png",
+    name: "White Nuts",
+    slug: "white_nuts",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 15.0,
+    star: 5,
+    category: {
+      name: "Millets",
+      slug: "millets",
     },
-    {
-        id:4,
-        slug:"tomatoo",
-        title:"Vegetable",
-        img:"/assets/images/Home/cabbage.png",
-        subTitle:"Cabbage",
-        price:"$20.00",
-        discountPrice:"$17.00"
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 4,
+    image: "/assests/images/home/tomatoo.png",
+    name: "Vegan Red Tomato",
+    slug: "vegan_red_tomato",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 17.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
     },
-]
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 5,
+    image: "/assests/images/home/mung.png",
+    name: "Mung Bean",
+    slug: "mung_bean",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 11.0,
+    star: 5,
+    category: {
+      name: "Health",
+      slug: "health",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 6,
+    image: "/assests/images/home/hazelnut.png",
+    name: "Brown Hazelnut",
+    slug: "brown_hazelnut",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 12.0,
+    star: 5,
+    category: {
+      name: "Nuts",
+      slug: "nuts",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 7,
+    image: "/assests/images/home/egg.png",
+    name: "Eggs",
+    alt: "vegetable",
+    slug: "eggs",
+    price: 20.0,
+    discount: 17.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 8,
+    image: "/assests/images/home/rusk1.png",
+    name: "Zelco Suji Elaichi Rusk",
+    slug: "zelco_suji_elaichi_rusk",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 15.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 9,
+    image: "/assests/images/home/mung.png",
+    name: "Mung Bean",
+    slug: "mung_bean",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 11.0,
+    star: 5,
+    category: {
+      name: "Health",
+      slug: "health",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 10,
+    image: "/assests/images/home/hazelNuts.png",
+    name: "White Hazelnut",
+    slug: "white_hazelnut",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 12.0,
+    star: 5,
+    category: {
+      name: "Nuts",
+      slug: "nuts",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 11,
+    image: "/assests/images/home/corn.png",
+    name: "Fresh Corn",
+    slug: "fresh_corn",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 17.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 12,
+    image: "/assests/images/home/amonds.png",
+    name: "Organic Almonds",
+    slug: "organic_almonds",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 15.0,
+    star: 5,
+    category: {
+      name: "Fresh",
+      slug: "fresh",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 13,
+    image: "/assests/images/home/zukini.png",
+    name: "Zukini",
+    slug: "zukini",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 12.0,
+    star: 5,
+    category: {
+      name: "Vegetable",
+      slug: "vegetable",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 14,
+    image: "/assests/images/home/onion.png",
+    name: "Onion",
+    slug: "onion",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 17.0,
+    star: 5,
+    category: {
+      name: "Vegetable",
+      slug: "vegetable",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+  {
+    id: 15,
+    image: "/assests/images/home/cabbage.png",
+    name: "Cabbage",
+    slug: "cabbage",
+    alt: "vegetable",
+    price: 20.0,
+    discount: 17.0,
+    star: 5,
+    category: {
+      name: "Vegetable",
+      slug: "vegetable",
+    },
+    description:
+      "Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+  },
+];

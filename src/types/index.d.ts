@@ -57,3 +57,19 @@ export interface IBlogPostSingle extends Array<{
     subTitle:string,
 
 }>{}
+
+export interface ICard{
+    id: number,
+    image: string,
+    name: string,
+    slug:string,
+    alt: string,
+    price: number,
+    discount: number,
+    star: number,
+    category: {
+      name:string,
+      slug:string
+    },
+    description:string
+   }

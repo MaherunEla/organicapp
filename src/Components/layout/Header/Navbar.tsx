@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
 
 import Link from "next/link";
 import Menu from "./Menu";
 
 const Navbar = () => {
- 
+  const dispatch = useDispatch()
+  const cart = useSelector((state)=>state.cart.products)
   const [showPageMenu, setShowPageMenu] = useState(false);
 
   return (
@@ -42,7 +44,7 @@ const Navbar = () => {
                 src="/assets/images/Home/Cart Icon.svg" fill alt="carticon"/>
 
             </div>
-            <span className="font-roboto text-lg font-semibold leading-normal text-sea_green">Cart (0)</span>
+            <span className="font-roboto text-lg font-semibold leading-normal text-sea_green">Cart {cart?.length}</span>
 
         </div>
             
