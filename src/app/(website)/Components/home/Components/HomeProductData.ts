@@ -40,11 +40,11 @@ export const HomeProductData = [
 export const products = [
   {
     id: 1,
-    image: "/assests/images/home/brocoli.png",
+    image: "/assets/images/Home/brocoli.png",
     name: "Calabrese Broccoli",
     slug: "calabrese_broccoli",
     alt: "vegetable",
-    price: 20.0,
+    price: 20.00,
     discount: 13.0,
     star: 5,
     category: {
@@ -56,7 +56,7 @@ export const products = [
   },
   {
     id: 2,
-    image: "/assests/images/home/bananaa.png",
+    image: "/assets/images/Home/bananaa.png",
     name: "Fresh Banana Fruites",
     slug: "fresh_banana_fruites",
     alt: "vegetable",
@@ -72,7 +72,7 @@ export const products = [
   },
   {
     id: 3,
-    image: "/assests/images/home/whiteNuts.png",
+    image: "/assets/images/Home/whiteNuts.png",
     name: "White Nuts",
     slug: "white_nuts",
     alt: "vegetable",
@@ -88,7 +88,7 @@ export const products = [
   },
   {
     id: 4,
-    image: "/assests/images/home/tomatoo.png",
+    image: "/assets/images/Home/tomatoo.png",
     name: "Vegan Red Tomato",
     slug: "vegan_red_tomato",
     alt: "vegetable",
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     id: 5,
-    image: "/assests/images/home/mung.png",
+    image: "/assets/images/Home/mung.png",
     name: "Mung Bean",
     slug: "mung_bean",
     alt: "vegetable",
@@ -120,7 +120,7 @@ export const products = [
   },
   {
     id: 6,
-    image: "/assests/images/home/hazelnut.png",
+    image: "/assets/images/Home/hazelnut.png",
     name: "Brown Hazelnut",
     slug: "brown_hazelnut",
     alt: "vegetable",
@@ -136,7 +136,7 @@ export const products = [
   },
   {
     id: 7,
-    image: "/assests/images/home/egg.png",
+    image: "/assets/images/Home/egg.png",
     name: "Eggs",
     alt: "vegetable",
     slug: "eggs",
@@ -152,7 +152,7 @@ export const products = [
   },
   {
     id: 8,
-    image: "/assests/images/home/rusk1.png",
+    image: "/assets/images/Home/rusk1.png",
     name: "Zelco Suji Elaichi Rusk",
     slug: "zelco_suji_elaichi_rusk",
     alt: "vegetable",
@@ -168,7 +168,7 @@ export const products = [
   },
   {
     id: 9,
-    image: "/assests/images/home/mung.png",
+    image: "/assets/images/Home/mung.png",
     name: "Mung Bean",
     slug: "mung_bean",
     alt: "vegetable",
@@ -184,7 +184,7 @@ export const products = [
   },
   {
     id: 10,
-    image: "/assests/images/home/hazelNuts.png",
+    image: "/assets/images/Home/hazelNuts.png",
     name: "White Hazelnut",
     slug: "white_hazelnut",
     alt: "vegetable",
@@ -200,7 +200,7 @@ export const products = [
   },
   {
     id: 11,
-    image: "/assests/images/home/corn.png",
+    image: "/assets/images/Home/corn.png",
     name: "Fresh Corn",
     slug: "fresh_corn",
     alt: "vegetable",
@@ -216,7 +216,7 @@ export const products = [
   },
   {
     id: 12,
-    image: "/assests/images/home/amonds.png",
+    image: "/assets/images/Home/amonds.png",
     name: "Organic Almonds",
     slug: "organic_almonds",
     alt: "vegetable",
@@ -232,7 +232,7 @@ export const products = [
   },
   {
     id: 13,
-    image: "/assests/images/home/zukini.png",
+    image: "/assets/images/Home/zukini.png",
     name: "Zukini",
     slug: "zukini",
     alt: "vegetable",
@@ -248,7 +248,7 @@ export const products = [
   },
   {
     id: 14,
-    image: "/assests/images/home/onion.png",
+    image: "/assets/images/Home/onion.png",
     name: "Onion",
     slug: "onion",
     alt: "vegetable",
@@ -264,12 +264,12 @@ export const products = [
   },
   {
     id: 15,
-    image: "/assests/images/home/cabbage.png",
+    image: "/assets/images/Home/cabbage.png",
     name: "Cabbage",
     slug: "cabbage",
     alt: "vegetable",
-    price: 20.0,
-    discount: 17.0,
+    price: 20.00,
+    discount: 17.00,
     star: 5,
     category: {
       name: "Vegetable",

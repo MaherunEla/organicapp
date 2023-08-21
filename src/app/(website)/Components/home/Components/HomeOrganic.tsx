@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ButtonD from "@/Components/Shared/ButtonD";
+import ButtonD.  from "../../Shared/ButtonD";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BlogPostData } from "@/app/blog/Components/BlogPostData";
 

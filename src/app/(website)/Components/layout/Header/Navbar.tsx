@@ -1,15 +1,26 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 
 import Link from "next/link";
 import Menu from "./Menu";
+import { useAppDispatch, useAppSelector } from "@/app/redux_store/store";
+import { addAllCart, addCart } from "@/app/redux_store/cartAddSlice";
 
 const Navbar = () => {
-  const dispatch = useDispatch()
-  const cart = useSelector((state)=>state.cart.products)
+   const dispatch = useAppDispatch()
+   const cart = useAppSelector((state)=>state?.cart?.products)
   const [showPageMenu, setShowPageMenu] = useState(false);
+  useEffect(() => {
+   const products = JSON.parse(localStorage.getItem("cart"))
+   console.log({products});
+   if(products){
+     dispatch(addAllCart(products))
+   }
+   
+  }, [])
+  
 
   return (
     <div className="bg-white">
@@ -44,7 +55,10 @@ const Navbar = () => {
                 src="/assets/images/Home/Cart Icon.svg" fill alt="carticon"/>
 
             </div>
+            <Link href="/checkout">
             <span className="font-roboto text-lg font-semibold leading-normal text-sea_green">Cart {cart?.length}</span>
+            </Link>
+           
 
         </div>
             

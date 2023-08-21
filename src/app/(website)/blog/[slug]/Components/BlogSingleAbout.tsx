@@ -13,7 +13,7 @@ const BlogSingleAbout = () => {
         </div>
         <div className='flex items-center gap-2'>
         <TbPointFilled />
-        <p> Content here, content here', making it look like readable</p>
+        <p> Content here, content here`&apos;`, making it look like readable</p>
         </div>
         <div className='flex items-center gap-2'>
         <TbPointFilled />

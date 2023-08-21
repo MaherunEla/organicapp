@@ -73,3 +73,19 @@ export interface ICard{
     },
     description:string
    }
+
+   export interface IRelatedCard extends Array<{
+    id: number,
+    image: string,
+    name: string,
+    slug:string,
+    alt: string,
+    price: number,
+    discount: number,
+    star: number,
+    category: {
+      name:string,
+      slug:string
+    },
+    description:string
+   }>{}

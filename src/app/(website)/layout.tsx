@@ -1,11 +1,11 @@
 "use client"
-import Navbar from '@/Components/layout/Header/Navbar'
-import './styles/globals.css'
+import Navbar from './Components/layout/Header/Navbar'
+import 'src/app/styles/globals.css'
 import { Roboto,Yellowtail,Open_Sans } from 'next/font/google'
-import Footer from '@/Components/layout/Footer/Footer'
+import Footer from './Components/layout/Footer/Footer'
 import { ReactElement } from 'react'
 import { Provider } from 'react-redux/es/exports'
-import { store } from './redux_store/store'
+import { store } from '../redux_store/store'
 
 const roboto = Roboto({
   subsets:['latin'],
