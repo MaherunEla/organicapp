@@ -1,8 +1,7 @@
 import React from 'react'
 import BillingHero from './Components/BillingHero'
 import BillingDetailes from './Components/BillingDetailes'
-import Subscribe from '@/Components/Shared/Subsribe'
-
+import Subscribe from '../Components/Shared/Subsribe'
 const page = () => {
   return (
     <div>

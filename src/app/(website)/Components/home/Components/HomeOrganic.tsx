@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import ButtonD.  from "../../Shared/ButtonD";
+import ButtonD from "../../Shared/ButtonD";
 import { BsArrowRightShort } from "react-icons/bs";
-import { BlogPostData } from "@/app/blog/Components/BlogPostData";
+import { BlogPostData } from "@/app/(website)/blog/Components/BlogPostData";
 
 const HomeOrganic = () => {
   const news = BlogPostData.slice(0, 2);

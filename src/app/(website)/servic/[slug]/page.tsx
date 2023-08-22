@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceSingleHero from './Components/ServiceSingleHero'
 import ServiceSingleAbout from './Components/ServiceSingleAbout'
-import Subscribe from '@/Components/Shared/Subsribe'
+import Subscribe from '../../Components/Shared/Subsribe'
 
 const page = () => {
   return (

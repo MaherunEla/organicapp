@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
-import { products } from "@/Components/home/Components/HomeProductData";
+import { products } from "../../home/Components/HomeProductData";
 import { ICard } from "@/types";
 
 type Props = {

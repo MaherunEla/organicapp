@@ -5,7 +5,7 @@ import { PortfolioProjectData } from '../Components/PortfolioProjectData';
 import PortfolioSingleHero from './Components/PortfolioSingleHero';
 import { IPortfolio } from '@/types';
 import PortfolioSingleAbout from './Components/PortfolioSingleAbout';
-import Subscribe from '@/Components/Shared/Subsribe';
+import Subscribe from '../../Components/Shared/Subsribe';
 
 const page = () => {
     const param= useParams();

@@ -1,8 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import Subscribe from '@/Components/Shared/Subsribe'
-
+import Subscribe from '../Components/Shared/Subsribe'
 const page = () => {
   return (
    <>

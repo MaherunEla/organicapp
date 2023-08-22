@@ -2,10 +2,10 @@
 import React from 'react'
 import ShopSingleHero from './Components/ShopSingleHero'
 import ShopSingleCart from './Components/ShopSingleCart'
-import { products } from '@/Components/home/Components/HomeProductData'
+import { products } from '../../Components/home/Components/HomeProductData'
 import { useParams } from 'next/navigation';
 import { ICard, IProduct,IRelatedCard } from '@/types';
-import Subscribe from '@/Components/Shared/Subsribe';
+import Subscribe from '../../Components/Shared/Subsribe'
 
 const page = () => {
   const param=useParams();

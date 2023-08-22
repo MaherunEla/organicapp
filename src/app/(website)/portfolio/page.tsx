@@ -1,8 +1,7 @@
 import React from 'react'
 import PortfolioHero from './Components/PortfolioHero'
 import PortfolioProject from './Components/PortfolioProject'
-import Subscribe from '@/Components/Shared/Subsribe'
-
+import Subscribe from '../Components/Shared/Subsribe'
 const page = () => {
   return (
     <div>

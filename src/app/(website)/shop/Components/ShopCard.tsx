@@ -3,9 +3,9 @@ import React from 'react'
 import { ShopCardData } from './ShopCardData'
 import Image from 'next/image'
 import {AiFillStar} from 'react-icons/ai'
-import Card from '@/Components/layout/card/Card'
+import Card from '../../Components/layout/card/Card'
 import Link from 'next/link'
-import { products } from '@/Components/home/Components/HomeProductData'
+import { products } from '../../Components/home/Components/HomeProductData'
 const ShopCard = () => {
     
   return ( 

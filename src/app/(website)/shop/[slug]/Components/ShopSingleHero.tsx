@@ -1,6 +1,5 @@
 import React from 'react'
-import HeroSection from '@/Components/Shared/HeroSection'
-
+import HeroSection from '@/app/(website)/Components/Shared/HeroSection';
 const ShopSingleHero = () => {
     const backgroundimg="/assets/images/Home/BannerShopS.jpg";
   return (

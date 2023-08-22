@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ButtonD from '@/Components/Shared/ButtonD'
+import ButtonD from '../../Components/Shared/ButtonD'
 const ServicesAbout = () => {
   return (
     <div className='container py-[202px] flex flex-col items-center justify-center'>

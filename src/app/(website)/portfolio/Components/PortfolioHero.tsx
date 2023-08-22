@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '@/Components/Shared/HeroSection';
+import HeroSection from '../../Components/Shared/HeroSection';
 const PortfolioHero = () => {
     const backgroundimg="/assets/images/portfolio/banner.png";
     return (

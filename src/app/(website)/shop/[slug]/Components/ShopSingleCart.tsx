@@ -6,7 +6,7 @@ import { AiFillStar } from "react-icons/ai";
 import { useRouter } from "next/navigation";
 import { ShopCardData } from "../../Components/ShopCardData";
 import { ICard, IProduct, IRelatedCard, IRelatedProduct } from "@/types";
-import Button from "@/Components/Shared/button";
+import Button from "@/app/(website)/Components/Shared/button";
 import { useDispatch } from "react-redux";
 import { addCart } from "@/app/redux_store/cartAddSlice";
 type Props = {

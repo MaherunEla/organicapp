@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import CheckOutHero from './components/CheckOutHero'
-import Subscribe from '@/Components/Shared/Subsribe'
-
+import Subscribe from '../Components/Shared/Subsribe'
 const page = () => {
   return (
     <div>
