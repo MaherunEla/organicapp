@@ -34,9 +34,9 @@ export default function RootLayout({ children }:{children:ReactElement}) {
     <html lang="en">
       <body className={`${roboto.variable} ${yellowtail.variable} ${open_sens}`}>
         <Provider store={store}>
-        <Navbar/> 
+         <Navbar/> 
         {children}
-        <Footer/>
+        <Footer/> 
         </Provider>
        
         </body>

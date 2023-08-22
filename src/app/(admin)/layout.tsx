@@ -5,7 +5,8 @@ import { Roboto,Yellowtail,Open_Sans } from 'next/font/google'
 import { ReactElement } from 'react'
 import { Provider } from 'react-redux/es/exports'
 import { store } from '../redux_store/store'
-import Sidebar from './layout/sidebar'
+import Sidebar from './layout/Sidebar'
+
 
 const roboto = Roboto({
   subsets:['latin'],
