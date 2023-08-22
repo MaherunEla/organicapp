@@ -1,28 +1,18 @@
 "use client"
 
-import 'src/app/styles/globals.css'
-import { Roboto,Yellowtail,Open_Sans } from 'next/font/google'
+import 'src/app/styles/style.css'
+import { Work_Sans } from 'next/font/google'
 import { ReactElement } from 'react'
 import { Provider } from 'react-redux/es/exports'
 import { store } from '../redux_store/store'
 import Sidebar from './layout/Sidebar'
 
 
-const roboto = Roboto({
-  subsets:['latin'],
-  weight:['400','500','900'],
-  variable:"--roboto"
-})
-const yellowtail = Yellowtail({
-  subsets:['latin'],
-  weight:['400'],
-  variable:"--yellowtail"
 
-})
-const open_sens= Open_Sans({
+const work_sans= Work_Sans({
   subsets:['latin'],
   weight:['400','500','800'],
-  variable:"--open_sens"
+  variable:"--work_sans"
 })
 
 export const metadata = {
@@ -33,9 +23,18 @@ export const metadata = {
 export default function RootLayout({ children }:{children:ReactElement}) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${yellowtail.variable} ${open_sens}`}>
-       <Sidebar/>
-        {children}
+      <body className={`${work_sans.variable} `}>
+       <div className='flex '>
+
+       <Sidebar />
+       <div className='flex-1'>
+       {children}
+
+       </div>
+        
+
+       </div>
+       
       
         </body>
     </html>

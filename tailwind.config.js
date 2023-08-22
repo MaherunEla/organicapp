@@ -26,7 +26,8 @@ module.exports = {
       fontFamily:{
         roboto:["var(--roboto)"],
         yellowtail:["var(--yellowtail)"],
-        open_sen:["var(--open_sen)"]
+        open_sen:["var(--open_sen)"],
+        work_sans:["var(--work_sans)"]
       }
     },
   },

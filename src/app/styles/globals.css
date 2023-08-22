@@ -9,7 +9,7 @@
     position: relative;
     overflow-x:hidden;
     background: white;
-    @apply font-roboto;
+    @apply font-roboto ;
 
   }
   h1{

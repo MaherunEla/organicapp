@@ -1,6 +1,10 @@
 import {BiHome} from 'react-icons/bi';
 import {BsDatabase} from 'react-icons/bs'
-import {IoBagHandleOutline} from 'react-icons/io'
+import {IoBagHandleOutline } from 'react-icons/io5'
+import {HiOutlineUsers} from 'react-icons/hi'
+import {CiPercent} from 'react-icons/ci'
+import {IoNewspaperOutline} from 'react-icons/io5'
+import {TbSettings} from 'react-icons/tb'
 export const SlidebarData = [
     {
         id:1,
@@ -28,19 +32,19 @@ export const SlidebarData = [
     },
     {
         id:4,
-        icon:BiHome,
+        icon:CiPercent,
         title:"Coupons",
         url:"/",
     },
     {
         id:5,
-        icon:BiHome,
+        icon:IoNewspaperOutline,
         title:"Categories",
         url:"/",
     },
     {
         id:6,
-        icon:BiHome,
+        icon:TbSettings,
         title:"Settings",
         url:"/",
     },
