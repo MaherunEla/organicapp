@@ -11,7 +11,7 @@ import Sidebar from './layout/Sidebar'
 
 const work_sans= Work_Sans({
   subsets:['latin'],
-  weight:['400','500','800'],
+  weight:['400','600','500'],
   variable:"--work_sans"
 })
 

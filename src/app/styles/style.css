@@ -12,11 +12,31 @@
   p{
     @apply text-[#666666] text-sm font-normal;
   }
-  #order tr:nth-child(even){background-color: #f2f2f2;}
-  #order td, #order th {
-    border: 1px solid #ddd;
-    padding: 12px 10px;
+  .tablep{
+    @apply font-semibold text-sm text-[#212529];
   }
+  #order{
+    border-spacing: 2px;
+    border-collapse: collapse;
+    @apply font-work_sans;
+  }
+  #order thead {
+    border-bottom:1px solid #ededed;
+  }
+  
+  #order tr:nth-child(even){background-color: #f3f4f8;}
+  #order tr th{
+    padding-top: 12px;
+    padding-bottom: 10px;
+    
+    
+}
+  #order tr td {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    
+    
+}
 }
 .container {
     margin:0 auto;

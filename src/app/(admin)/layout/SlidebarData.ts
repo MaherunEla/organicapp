@@ -10,13 +10,13 @@ export const SlidebarData = [
         id:1,
         icon:BiHome,
         title:"Dashboard",
-        url:"/",
+        url:"/dashboard",
     },
     {
         id:2,
         icon:BsDatabase,
         title:"Products",
-        url:"/",
+        url:"/products",
     },
     {
         id:3,
