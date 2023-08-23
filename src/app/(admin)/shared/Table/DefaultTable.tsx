@@ -55,7 +55,7 @@ const DefaultTable:FC<{data:any,columns:any}> = ({data,columns}) => {
       </table>
       <div className="pt-[50px] flex justify-between ">
         <div>
-            <p className="tablep text-[#666666]">show  in {table.getPageCount()} items</p>
+            <p className="tablep text-[#666666]">show   in {table.getPageCount()} items</p>
         </div>
       <div className="flex items-center gap-[10px]">
         <button
