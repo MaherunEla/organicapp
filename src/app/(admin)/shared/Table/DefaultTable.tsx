@@ -3,11 +3,13 @@ import React, { FC } from "react";
 import {MdNavigateNext} from 'react-icons/md'
 import {GrFormPrevious} from 'react-icons/gr'
 import { flexRender, getCoreRowModel } from "@tanstack/react-table";
+
 import {
   useReactTable,
   PaginationState,
   getPaginationRowModel,
 } from "@tanstack/react-table";
+import { getJsPageSizeInKb } from "next/dist/build/utils";
 
 const DefaultTable:FC<{data:any,columns:any}> = ({data,columns}) => {
   const table = useReactTable({
@@ -19,6 +21,7 @@ const DefaultTable:FC<{data:any,columns:any}> = ({data,columns}) => {
   });
   console.log("table state",table.getState());
   var pages = Array.from({length: table.getPageCount()}, (_, index) => index + 1);
+  
   return (
     <div>
       <table className="border-collapse w-full  " id="order">
@@ -55,7 +58,7 @@ const DefaultTable:FC<{data:any,columns:any}> = ({data,columns}) => {
       </table>
       <div className="pt-[50px] flex justify-between ">
         <div>
-            <p className="tablep text-[#666666]">show   in {table.getPageCount()} items</p>
+            <p className="tablep text-[#666666]">show  {table.getState().pagination.pageSize} in {data.length} items</p>
         </div>
       <div className="flex items-center gap-[10px]">
         <button

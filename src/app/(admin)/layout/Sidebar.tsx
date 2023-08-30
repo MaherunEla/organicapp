@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 const Sidebar = () => {
   return (
-    <div className='w-[375px] h-screen bg-[#f1f2f6] pl-[60px] py-[60px] pr-[30px]'>
+    <div className='w-[375px] h-screen bg-[#f1f2f6] px-[60px] py-[60px] '>
       <div className=' flex items-center justify-between mb-[80px]'>
         <div className='flex items-center justify-center gap-[10px]'>
           <div className='w-[50px] h-[50px] relative'>
@@ -39,7 +39,7 @@ const Sidebar = () => {
       <div className=' flex flex-col gap-[10px] mb-[80px]'>
         {
           SlidebarData.map((item,index)=>(
-            <Link href="/" key={index}>
+            <Link href={item.url} key={index}>
               <div className='flex gap-[30px] pb-[10px] hover:text-[#26901b] active:text-[#26901b]'>
                 <item.icon className="text-[#666666] hover:text-[#26901b] active:text-[#26901b]" size={20}/>
                 <p className='font-medium font-work_sans hover:text-[#26901b] active:text-[#26901b] text-base text-[#222] leading-5'>{item.title}</p>

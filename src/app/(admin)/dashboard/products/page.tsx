@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Navbar from '../shared/Navbar'
+import Navbar from '../../shared/Navbar'
 import { useState } from 'react'
 import ProductTable from './Components/ProductTable'
 import Link from 'next/link'
@@ -18,7 +18,7 @@ const page = () => {
           <Link href=""><p className='w-[190px] py-[10px] px-[35px] uppercase font-medium text-sm text-[#ffffff] bg-[#80bc00]'>+ New Product</p></Link>
         </div>
         <div className='flex gap-[10px] pb-[50px]'>
-          <form className='w-[232px] '>
+          <form className='w-[727px] flex gap-2'>
 
             <select className='border border-[#ddd] py-[10px] px-[20px]'>
               <option selected value="0">
@@ -29,6 +29,27 @@ const page = () => {
               <option value="2">Clothing & Apparel</option>
 
             </select>
+
+            <select className='border border-[#ddd] py-[10px] px-[20px]'>
+              <option selected value="0">
+                Product Type
+
+              </option>
+              <option value="1">Simple Product </option>
+              <option value="2">Groupped product</option>
+
+            </select>
+
+            <select className='border border-[#ddd] py-[10px] px-[20px]'>
+              <option selected value="0">
+                Status
+
+              </option>
+              <option value="1">Active</option>
+              <option value="2">Inactive</option>
+
+            </select>
+            <button></button>
           </form>
 
         </div>

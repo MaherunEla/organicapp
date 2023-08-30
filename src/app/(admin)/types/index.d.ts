@@ -30,3 +30,45 @@ export type Customers = {
     icon:any
     
 }
+
+export type Coupons = {
+    code:number,
+    percent:number,
+    currency:number,
+    created:string,
+    status:string,
+    icon:any
+}
+
+export type Categories = {
+    id:number,
+    name:string,
+    slug:string,
+    created:string,
+    icon:any
+}
+
+export type FormValues = {
+    fullname:string,
+    displayname:string,
+    email:string,
+    role:string,
+    address:string,
+    bio:string
+}
+
+export type FormCoupons = {
+    couponcode:string,
+    bypercent:number,
+    bycurrency:number,
+    expireddate:string,
+    description:string
+}
+
+export type FormCategory = {
+    id:number,
+    name:string,
+    slug:string,
+    created:string,
+    description:string
+}

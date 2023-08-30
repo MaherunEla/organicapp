@@ -1,5 +1,5 @@
 import {createColumnHelper} from '@tanstack/react-table'
-import { Customers } from '../../types'
+import { Customers } from '@/app/(admin)/types'
 
 const columnHelper = createColumnHelper<Customers>()
 export const columns = [
@@ -17,7 +17,7 @@ export const columns = [
         header:()=>'Phone Number'
     }),
     columnHelper.accessor('balance',{
-        cell:info=> <p className='w-fit font-semibold text-sm text-[#669900] py-[6px] px-[10px] bg-[#eff4e5] rounded-[4px] '>{info.renderValue()}</p>,
+        cell:info=> <p className='tablep'>${info.renderValue().toFixed(2)}</p>,
         header:()=>'Balance'
     }),
     columnHelper.accessor('totalorder',{
@@ -26,12 +26,12 @@ export const columns = [
     }),
     columnHelper.accessor('created',{
         header:()=> 'Created at',
-        cell: info=><p className='tablep'>${info.renderValue()}</p>,
+        cell: info=><p className='w-fit font-semibold text-sm text-[#669900] py-[6px] px-[10px] bg-[#eff4e5] rounded-[4px]'>{info.renderValue()}</p>,
 
     }),
     columnHelper.accessor('status',{
         header:()=> 'Status',
-        cell: info=><p className='tablep'>${info.renderValue()}</p>,
+        cell: info=><p className='tablep'>{info.renderValue()}</p>,
 
     }),
     columnHelper.accessor('icon',{

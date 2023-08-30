@@ -7,7 +7,7 @@ import {
   PaginationState,
   getPaginationRowModel,
 } from "@tanstack/react-table";
-import DefaultTable from "../../shared/Table/DefaultTable";
+import DefaultTable from "@/app/(admin)/shared/Table/DefaultTable";
 import { defaultData } from "./ProductTableData";
 
 const ProductTable = () => {

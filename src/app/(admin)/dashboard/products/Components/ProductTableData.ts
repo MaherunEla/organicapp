@@ -1,4 +1,4 @@
-import { Product } from "../../types";
+import { Product } from "@/app/(admin)/types";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
 export const defaultData :Product[]=[
     {

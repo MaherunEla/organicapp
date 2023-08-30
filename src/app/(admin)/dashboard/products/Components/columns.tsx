@@ -1,5 +1,5 @@
 import {createColumnHelper} from '@tanstack/react-table'
-import { Product } from '../../types'
+import { Product } from '@/app/(admin)/types'
 
 const columnHelper = createColumnHelper<Product>()
 export const columns = [
