@@ -16,18 +16,18 @@ export const columns = [
         cell:info=> <p className='tp hover:text-[#669900] '>{info.getValue()}</p>,
         header:()=>'Slug'
     }),
-    columnHelper.accessor('created',{
+    columnHelper.accessor('createdAt',{
         cell:info=> <p className='tp'>{info.renderValue()}</p>,
         header:()=>'created'
     }),
-    columnHelper.accessor('icon',{
-        header:()=>"",
-        cell:info => {
-            const Icon = info.getValue()
-            return <button><Icon size={14}/></button>
-        }
+    // columnHelper.accessor('icon',{
+    //     header:()=>"",
+    //     cell:info => {
+    //         const Icon = info.getValue()
+    //         return <button><Icon size={14}/></button>
+    //     }
 
-    })
+    // })
     
 
 ]

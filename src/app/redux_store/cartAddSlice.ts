@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { products } from "@/Components/home/Components/HomeProductData";
+import { products } from "../(website)/Components/home/Components/HomeProductData";
 
 const slice = createSlice({
   name: "cart",
@@ -53,6 +53,11 @@ const slice = createSlice({
   },
 });
 
-export const { addCart, addAllCart,removeCart, addQuantity, decrementQuantity } =
-  slice.actions;
+export const {
+  addCart,
+  addAllCart,
+  removeCart,
+  addQuantity,
+  decrementQuantity,
+} = slice.actions;
 export default slice.reducer;

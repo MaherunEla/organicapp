@@ -8,11 +8,6 @@ export const GET = async (req) => {
       name: "ela",
       email: "ela@gmail.com",
       age: 23,
-      UserPreference: {
-        create: {
-          emailUpdates: true,
-        },
-      },
     },
   });
   return NextResponse.json(users);
