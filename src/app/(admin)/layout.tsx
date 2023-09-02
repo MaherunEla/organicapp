@@ -1,7 +1,7 @@
 "use client";
 import "src/app/styles/style.css";
 import { Work_Sans } from "next/font/google";
-import {QueryClientProvider,QueryClient} from 'react-query'
+import {QueryClientProvider,QueryClient} from '@tanstack/react-query'
 import { ReactElement } from "react";
 import { Provider } from "react-redux/es/exports";
 import { store } from "../redux_store/store";

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { FormCategory } from "@/app/(admin)/types";
 import { useState } from "react";
 import axios from "axios";
+import { QueryClient,useQueryClient } from "@tanstack/react-query";
 
 const CategoryForm = () => {
   const [name, setName] = useState("");
@@ -22,7 +23,8 @@ const CategoryForm = () => {
       })
       .catch((err) => console.log({ err }));
   };
-
+  const queryClient = useQueryClient()
+  queryClient.invalidateQueries({ queryKey: ['category-data'] })
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
   };

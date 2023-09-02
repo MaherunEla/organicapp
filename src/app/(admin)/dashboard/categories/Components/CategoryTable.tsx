@@ -1,7 +1,7 @@
 "use client";
 import DefaultTable from "@/app/(admin)/shared/Table/DefaultTable";
 import React, { useEffect,useState } from "react";
-import {useQuery} from 'react-query'
+import {useQuery} from '@tanstack/react-query'
 import { columns } from "./columns";
 import { data2, defaultData } from "./CategoryTableData";
 import axios from 'axios'
@@ -10,7 +10,10 @@ const fetchCategory = ()=> {
 }
 const CategoryTable = () => {
   //const [data, setData] = useState([])
-  const {isLoading,data,isError,error,isFetching,refetch} = useQuery('category-data', fetchCategory)
+  const {isLoading,data,isError,error,isFetching,refetch} = useQuery({
+    queryKey:['category-data'], 
+    queryFn: fetchCategory
+  })
   if(isLoading)
   {
     return <h2>Loading...</h2>
