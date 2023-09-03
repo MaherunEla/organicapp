@@ -50,6 +50,16 @@ model Category {
   description String?
 }
 
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  sku        String   @unique
+  productsummary String?
+  price       Float
+  createdAt   DateTime @default(now())
+  description String?
+  productgallery String
+}
 enum Role {
   BASIC
   EDITOR

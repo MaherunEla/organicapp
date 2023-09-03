@@ -15,7 +15,7 @@ const page = () => {
     <div className='container'>
         <Navbar title="Products" subtitle="Products Listings"/>
         <div className='flex items-end justify-end pb-[50px] '>
-          <Link href=""><p className='w-[190px] py-[10px] px-[35px] uppercase font-medium text-sm text-[#ffffff] bg-[#80bc00]'>+ New Product</p></Link>
+          <Link href="/dashboard/products/addnewproducts"><p className='w-[190px] py-[10px] px-[35px] uppercase font-medium text-sm text-[#ffffff] bg-[#80bc00]'>+ New Product</p></Link>
         </div>
         <div className='flex gap-[10px] pb-[50px]'>
           <form className='w-[727px] flex gap-2'>
