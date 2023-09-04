@@ -43,23 +43,27 @@ model User {
 // }
 
 model Category {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   name        String
-  slug        String   @unique
-  createdAt   DateTime @default(now())
+  slug        String    @unique
+  createdAt   DateTime  @default(now())
   description String?
+  products    Product[]
 }
 
 model Product {
-  id          String   @id @default(uuid())
-  name        String
-  sku        String   @unique
-  productsummary String?
-  price       Float
-  createdAt   DateTime @default(now())
-  description String?
-  productgallery String
+  id                String   @id @default(uuid())
+  name              String
+  sku               String   @unique
+  productsummary    String?
+  price             Float
+  createdAt         DateTime @default(now())
+  description       String?
+  productgallery    String
+  productcategory   Category @relation(fields: [productcategoryId], references: [id])
+  productcategoryId String
 }
+
 enum Role {
   BASIC
   EDITOR

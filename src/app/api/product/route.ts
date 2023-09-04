@@ -6,14 +6,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 
 export const GET = async (req) => {
-  const products = await prisma.category.findMany();
+  const products = await prisma.product.findMany();
   return NextResponse.json(products);
 };
 
 export async function POST(req: Request) {
   const data = await req.json();
 
-  const res = await prisma.products.create({
+  const res = await prisma.product.create({
     data: data,
   });
   return NextResponse.json(res);

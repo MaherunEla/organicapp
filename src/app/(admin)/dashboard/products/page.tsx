@@ -20,15 +20,7 @@ const page = () => {
         <div className='flex gap-[10px] pb-[50px]'>
           <form className='w-[727px] flex gap-2'>
 
-            <select className='border border-[#ddd] py-[10px] px-[20px]'>
-              <option selected value="0">
-                Select Category
-
-              </option>
-              <option value="1">Clothing & Apparel</option>
-              <option value="2">Clothing & Apparel</option>
-
-            </select>
+           
 
             <select className='border border-[#ddd] py-[10px] px-[20px]'>
               <option selected value="0">

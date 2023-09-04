@@ -71,3 +71,14 @@ export type FormCategory = {
   created: string;
   description: string;
 };
+
+export type FormProduct = {
+  id: number;
+  name: string;
+  productsummary: string;
+  price: Int;
+  description: string;
+  productgallery: string;
+  sku: string;
+  productcategoryId: string;
+};
