@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  body{
+  /* body{
     @apply font-work_sans;
   }
   h4{
@@ -28,27 +28,25 @@
     border-spacing: 2px;
     border-collapse: collapse;
     @apply font-work_sans;
-  }
+  } */
   #order thead {
-    border-bottom:1px solid #ededed;
+    border-bottom: 1px solid #ededed;
   }
-  
-  #order tr:nth-child(even){background-color: #f3f4f8;}
-  #order tr th{
+
+  #order tr:nth-child(even) {
+    background-color: #f3f4f8;
+  }
+  #order tr th {
     padding-top: 12px;
     padding-bottom: 10px;
-    
-    
-}
+  }
   #order tr td {
     padding-top: 12px;
     padding-bottom: 10px;
-    
-    
-}
+  }
 }
 .container {
-    margin:0 auto;
-    width: calc(100% - 80px);
-    max-width:1505px;
-  }
+  margin: 0 auto;
+  width: calc(100% - 80px);
+  max-width: 1505px;
+}
