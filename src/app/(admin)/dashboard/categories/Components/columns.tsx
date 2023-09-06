@@ -26,7 +26,8 @@ export const columns = [
     header: () => "",
     cell: (info) => {
       const Icon = info.getValue();
-      return <DropdownMenuDemo />;
+      const id = info.row.original.id;
+      return <DropdownMenuDemo id={id} />;
     },
   }),
 ];

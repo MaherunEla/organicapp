@@ -32,8 +32,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
+import Link from "next/link";
+import { DELETE } from "@/app/api/category/[id]/route";
 
-export function DropdownMenuDemo() {
+export function DropdownMenuDemo(props: { id: string }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -41,15 +43,17 @@ export function DropdownMenuDemo() {
           <IoEllipsisHorizontalOutline />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="ml-[100px] w-32 bg-white">
+      <DropdownMenuContent className="ml-[100px] w-32  bg-white">
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <span>Edit</span>
+          <DropdownMenuItem className=" bg-[#e5e7eb] ">
+            <Link href={`/dashboard/categories/${props.id}`}>
+              <span>Edit</span>
+            </Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <span>Delete</span>
+            <span onClick={() => DELETE(props.id)}>Delete</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
