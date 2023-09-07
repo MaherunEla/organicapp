@@ -210,6 +210,7 @@ const NewProducts = () => {
                 // })}
               />
               <p className="error">{errors.productgallery?.message}</p>
+
               {/* <div className="flex flex-col gap-3 mb-4">
                 <label htmlFor="name">Product Gallery</label>
                 <UploadButton<OurFileRouter>

@@ -33,9 +33,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
 import Link from "next/link";
-import { DELETE } from "@/app/api/category/[id]/route";
+import axios from "axios";
 
 export function DropdownMenuDemo(props: { id: string }) {
+  const deleteCategory = async (id) => {
+    try {
+      const response = await axios.delete(`/api/category/${id}`);
+      console.log(response);
+    } catch (error) {
+      console.error("An error occurred while deleting the category:", error);
+    }
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -47,13 +55,13 @@ export function DropdownMenuDemo(props: { id: string }) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem className=" bg-[#e5e7eb] ">
-            <Link href={`/dashboard/categories/${props.id}`}>
+            <Link href={`/dashboard/categories/edit/${props.id}`}>
               <span>Edit</span>
             </Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <span onClick={() => DELETE(props.id)}>Delete</span>
+            <span onClick={() => deleteCategory(props.id)}>Delete</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />

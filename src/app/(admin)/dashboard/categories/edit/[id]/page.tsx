@@ -1,20 +1,41 @@
 "use client";
 import React from "react";
+import { useParams } from "next/navigation";
+import { QueryClient, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { FormCategory } from "@/app/(admin)/types";
 import { useState } from "react";
 import axios from "axios";
-import { QueryClient, useQueryClient } from "@tanstack/react-query";
-import { useParams } from "next/navigation";
 
+const fetchCategory = () => {
+  return axios.get("/api/category");
+};
 const Page = () => {
+  // const [name, setName] = useState("");
+  // const [slug, setSlug] = useState("");
+  // const [description, setDescription] = useState("");
   const params = useParams();
-  // console.log("param", params);
+  console.log("param", params);
+  const { isLoading, data, isError, error, isFetching, refetch } = useQuery({
+    queryKey: ["category-data"],
+    queryFn: fetchCategory,
+  });
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+  if (isError) {
+    return <h2>{error.message}</h2>;
+  }
 
-  const [name, setName] = useState("");
-  const [slug, setSlug] = useState("");
-  const [description, setDescription] = useState("");
-  const form = useForm<FormCategory>();
+  console.log({ data });
+
+  const form = useForm<FormCategory>({
+    defaultValues: {
+      name: data.data.name,
+      slug: data.data.slug,
+      description: data.data.slug,
+    },
+  });
 
   const { register, handleSubmit, formState } = form;
   const { errors } = formState;
@@ -27,21 +48,12 @@ const Page = () => {
       })
       .catch((err) => console.log({ err }));
   };
-  const queryClient = useQueryClient();
-  queryClient.invalidateQueries({ queryKey: ["category-data"] });
-  const onSuccess = (data) => {
-    console.log("Perform side effect after data fetching", data);
-  };
-
-  const onError = (error) => {
-    console.log("Perform side effect after encounting error", error);
-  };
 
   // const {isLoading, data, isError,error, isFetching} = useCategoryData(onSuccess,onError)
 
-  const handleAddCategory = () => {
-    console.log({ name, slug, description });
-  };
+  // const handleAddCategory = () => {
+  //   console.log({ name, slug, description });
+  // };
   return (
     <div className="container py-10">
       <h4 className="mb-[10px]">New Category</h4>
@@ -61,7 +73,7 @@ const Page = () => {
             type="text"
             className="w-full border border-[#ddd]  py-3"
             id="name"
-            onChange={(e) => setName(e.target.value)}
+            //onChange={(e) => setName(e.target.value)}
             {...register("name", {
               required: {
                 value: true,
@@ -78,13 +90,14 @@ const Page = () => {
             type="text"
             className="w-full border border-[#ddd]  py-3"
             id="slug"
-            onChange={(e) => setSlug(e.target.value)}
+            // onChange={(e) => setSlug(e.target.value)}
             {...register("slug", {
               required: {
                 value: true,
                 message: "slug is required",
               },
             })}
+            defaultValue={form.getValues("slug")}
           />
           <p className="error">{errors.slug?.message}</p>
         </div>
@@ -104,7 +117,7 @@ const Page = () => {
             id="description"
             rows="6"
             cols="50"
-            onChange={(e) => setDescription(e.target.value)}
+            //onChange={(e) => setDescription(e.target.value)}
             {...register("description", {
               required: {
                 value: true,
@@ -120,10 +133,7 @@ const Page = () => {
           <button className="py-[10px] px-[35px] border border-[#e5e5e5] bg-[#e5e5e5] uppercase">
             RESET
           </button>
-          <button
-            className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase"
-            onClick={handleAddCategory}
-          >
+          <button className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase">
             ADD NEW
           </button>
         </div>
