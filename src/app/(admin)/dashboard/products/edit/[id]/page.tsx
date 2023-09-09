@@ -1,30 +1,25 @@
 "use client";
 import React from "react";
+import { useParams } from "next/navigation";
+import { QueryClient, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { FormProduct } from "@/app/(admin)/types";
 import { useState } from "react";
 import axios from "axios";
-import { QueryClient, useQueryClient, useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import Image from "next/image";
-import "@uploadthing/react/styles.css";
-import { useToast } from "@/components/ui/use-toast";
-
 import { uploadImages } from "../../../../../../../prisma/utilts/uploadImage";
+import { useToast } from "@/components/ui/use-toast";
 
 const fetchCategory = () => {
   return axios.get("/api/category");
 };
-const NewProducts = () => {
-  const queryClient = new QueryClient();
+const Page = () => {
   const { toast } = useToast();
-  const [name, setName] = useState("");
-  const [summery, setSummery] = useState("");
-  const [sale, setSale] = useState("");
-  const [description, setDescription] = useState("");
-  const [productgallery, setProductgallery] = useState("");
-  const [sku, setSku] = useState("");
-  const [productcategoryId, setProductcategoryId] = useState("");
+
+  // const [name, setName] = useState("");
+  // const [slug, setSlug] = useState("");
+  // const [description, setDescription] = useState("");
   const [images, setImages] = useState<
     {
       fileUrl: string;
@@ -32,45 +27,43 @@ const NewProducts = () => {
     }[]
   >([]);
 
-  const form = useForm<FormProduct>();
+  const params = useParams();
+  console.log("param", params);
+
+  const form = useForm<FormProduct>({
+    defaultValues: async () => {
+      const { data } = await axios.get(`/api/product/${params.id}`);
+      return data;
+    },
+  });
+
+  const { register, handleSubmit, formState } = form;
   const categoryresult = useQuery({
     queryKey: ["category-data"],
     queryFn: fetchCategory,
   });
-  // if(isLoading)
-  // {
-  //   return <h2>Loading...</h2>
-  // }
-  // if(isError){
-  //   return <h2>{error.message}</h2>
-  // }
-
-  const { register, handleSubmit, formState } = form;
-  const { errors } = formState;
-  const [preview, setPreview] = useState(null);
+  const { errors, defaultValues } = formState;
+  console.log(defaultValues?.productgallery);
+  const [preview, setPreview] = useState(defaultValues?.productgallery);
   const onSubmit = async (data: FormProduct) => {
-    data.price = Number(data.price);
     console.log("Form submitted...", data);
-    console.log({ data });
-
     axios
-      .post("http://localhost:3000/api/product", data)
+      .put(`http://localhost:3000/api/product/${params.id}`, data)
       .then((res) => {
         console.log({ res });
       })
       .catch((err) => console.log({ err }));
   };
+
   console.log({ preview });
-  // const queryClient = useQueryClient()
-  // queryClient.invalidateQueries({ queryKey: ['product-data'] })
 
   // const {isLoading, data, isError,error, isFetching} = useCategoryData(onSuccess,onError)
 
-  const handleAddCategory = () => {
-    // console.log({ name, summery,sale, description ,productgallery,sku, productcategoryId});
-  };
+  // const handleAddCategory = () => {
+  //   console.log({ name, slug, description });
+  // };
   return (
-    <div>
+    <div className="container py-10">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         {/* <div className="flex flex-col gap-3 mb-4">
            <label htmlFor="couponcode">ID</label>
@@ -89,7 +82,6 @@ const NewProducts = () => {
                   type="text"
                   className="w-full border border-[#ddd]  py-3"
                   id="name"
-                  onChange={(e) => setName(e.target.value)}
                   {...register("name", {
                     required: {
                       value: true,
@@ -115,7 +107,6 @@ const NewProducts = () => {
                   id="summery"
                   rows="6"
                   cols="50"
-                  onChange={(e) => setSummery(e.target.value)}
                   {...register("productsummary", {
                     required: {
                       value: true,
@@ -133,7 +124,6 @@ const NewProducts = () => {
                   type="number"
                   className="w-full border border-[#ddd]  py-3"
                   id="price"
-                  onChange={(e) => setSale(e.target.value)}
                   {...register("price", {
                     required: {
                       value: true,
@@ -169,7 +159,6 @@ const NewProducts = () => {
                   id="description"
                   rows="6"
                   cols="50"
-                  onChange={(e) => setDescription(e.target.value)}
                   {...register("description", {
                     required: {
                       value: true,
@@ -183,8 +172,13 @@ const NewProducts = () => {
             </div>
 
             <div>
-              {preview && (
-                <Image src={preview} width={400} height={400} alt="product" />
+              {(defaultValues?.productgallery || preview) && (
+                <Image
+                  src={preview || defaultValues?.productgallery}
+                  width={400}
+                  height={400}
+                  alt="product"
+                />
               )}
 
               <input
@@ -275,4 +269,4 @@ const NewProducts = () => {
   );
 };
 
-export default NewProducts;
+export default Page;

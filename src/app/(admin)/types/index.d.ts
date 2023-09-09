@@ -15,7 +15,7 @@ export type Product = {
   stock: string;
   price: number;
   categories: string;
-  date: string;
+  createdAt: string;
   icon: any;
 };
 
@@ -31,10 +31,10 @@ export type Customers = {
 };
 
 export type Coupons = {
-  code: number;
+  id: string;
   percent: number;
   currency: number;
-  created: string;
+  createdAt: string;
   status: string;
   icon: any;
 };
@@ -57,10 +57,11 @@ export type FormValues = {
 };
 
 export type FormCoupons = {
-  couponcode: string;
-  bypercent: number;
-  bycurrency: number;
-  expireddate: string;
+  id: string;
+  percent: number;
+  currency: number;
+  createdAt: string;
+  status: string;
   description: string;
 };
 
@@ -81,4 +82,5 @@ export type FormProduct = {
   productgallery: string;
   sku: string;
   productcategoryId: string;
+  icon: any;
 };

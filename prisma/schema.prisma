@@ -64,6 +64,24 @@ model Product {
   productcategoryId String
 }
 
+model Coupons {
+  id        String   @id @default(uuid())
+  percent   Int
+  currency  Int
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  id          String   @id @default(uuid())
+  name        String
+  displayname String
+  email       String
+  role        String
+  address     String
+  bio         String
+  createdAt   DateTime @default(now())
+}
+
 enum Role {
   BASIC
   EDITOR

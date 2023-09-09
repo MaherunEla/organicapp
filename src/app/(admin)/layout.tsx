@@ -1,13 +1,14 @@
 "use client";
 import "src/app/styles/style.css";
 import { Work_Sans } from "next/font/google";
-import {QueryClientProvider,QueryClient} from '@tanstack/react-query'
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ReactElement } from "react";
 import { Provider } from "react-redux/es/exports";
 import { store } from "../redux_store/store";
 import Sidebar from "./layout/Sidebar";
+import { Toaster } from "@/components/ui/toaster";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 const work_sans = Work_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "500", "700"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactElement }) {
             <Sidebar />
             <div className="flex-1">{children}</div>
           </div>
+          <Toaster />
         </QueryClientProvider>
       </body>
     </html>

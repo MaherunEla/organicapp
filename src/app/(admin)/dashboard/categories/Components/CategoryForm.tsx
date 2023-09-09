@@ -4,12 +4,11 @@ import { useForm } from "react-hook-form";
 import { FormCategory } from "@/app/(admin)/types";
 import { useState } from "react";
 import axios from "axios";
-import { QueryClient,useQueryClient } from "@tanstack/react-query";
-
+import { QueryClient, useQueryClient } from "@tanstack/react-query";
+import { useToast } from "@/components/ui/use-toast";
 const CategoryForm = () => {
-  const [name, setName] = useState("");
-  const [slug, setSlug] = useState("");
-  const [description, setDescription] = useState("");
+  const { toast } = useToast();
+
   const form = useForm<FormCategory>();
 
   const { register, handleSubmit, formState } = form;
@@ -23,8 +22,8 @@ const CategoryForm = () => {
       })
       .catch((err) => console.log({ err }));
   };
-  const queryClient = useQueryClient()
-  queryClient.invalidateQueries({ queryKey: ['category-data'] })
+  const queryClient = useQueryClient();
+  queryClient.invalidateQueries({ queryKey: ["category-data"] });
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
   };
@@ -35,9 +34,6 @@ const CategoryForm = () => {
 
   // const {isLoading, data, isError,error, isFetching} = useCategoryData(onSuccess,onError)
 
-  const handleAddCategory = () => {
-    console.log({ name, slug, description });
-  };
   return (
     <div>
       <h4 className="mb-[10px]">New Category</h4>
@@ -57,7 +53,6 @@ const CategoryForm = () => {
             type="text"
             className="w-full border border-[#ddd]  py-3"
             id="name"
-            onChange={(e) => setName(e.target.value)}
             {...register("name", {
               required: {
                 value: true,
@@ -74,7 +69,6 @@ const CategoryForm = () => {
             type="text"
             className="w-full border border-[#ddd]  py-3"
             id="slug"
-            onChange={(e) => setSlug(e.target.value)}
             {...register("slug", {
               required: {
                 value: true,
@@ -100,7 +94,6 @@ const CategoryForm = () => {
             id="description"
             rows="6"
             cols="50"
-            onChange={(e) => setDescription(e.target.value)}
             {...register("description", {
               required: {
                 value: true,
@@ -118,7 +111,11 @@ const CategoryForm = () => {
           </button>
           <button
             className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase"
-            onClick={handleAddCategory}
+            onClick={() => {
+              toast({
+                title: "Category Add successfully  ",
+              });
+            }}
           >
             ADD NEW
           </button>

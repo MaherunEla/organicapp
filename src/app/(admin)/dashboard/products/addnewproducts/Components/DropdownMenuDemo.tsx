@@ -15,7 +15,7 @@ import {
   UserPlus,
   Users,
 } from "lucide-react";
-
+import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -34,12 +34,12 @@ import {
 import { IoEllipsisHorizontalOutline } from "react-icons/io5";
 import Link from "next/link";
 import axios from "axios";
-import { useToast } from "@/components/ui/use-toast";
+
 export function DropdownMenuDemo(props: { id: string }) {
   const { toast } = useToast();
-  const deleteCategory = async (id) => {
+  const deleteProduct = async (id) => {
     try {
-      const response = await axios.delete(`/api/category/${id}`);
+      const response = await axios.delete(`/api/product/${id}`);
       console.log(response);
     } catch (error) {
       console.error("An error occurred while deleting the category:", error);
@@ -56,15 +56,15 @@ export function DropdownMenuDemo(props: { id: string }) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem className=" bg-[#e5e7eb] ">
-            <Link href={`/dashboard/categories/edit/${props.id}`}>
-              <span>Edit</span>
+            <Link href={`/dashboard/products/edit/${props.id}`}>
+              <button>Edit</button>
             </Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
             <button
               onClick={() => {
-                deleteCategory(props.id);
+                deleteProduct(props.id);
                 toast({
                   title: "Product Deleted successfully ",
                 });

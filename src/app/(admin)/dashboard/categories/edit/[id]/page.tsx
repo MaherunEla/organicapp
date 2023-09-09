@@ -6,43 +6,37 @@ import { useForm } from "react-hook-form";
 import { FormCategory } from "@/app/(admin)/types";
 import { useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
-const fetchCategory = () => {
-  return axios.get("/api/category");
+import { useToast } from "@/components/ui/use-toast";
+
+const fetchCategoryId = (id) => {
+  return axios.get(`/api/category/${id}`);
 };
 const Page = () => {
+  const { toast } = useToast();
+
   // const [name, setName] = useState("");
   // const [slug, setSlug] = useState("");
   // const [description, setDescription] = useState("");
   const params = useParams();
   console.log("param", params);
-  const { isLoading, data, isError, error, isFetching, refetch } = useQuery({
-    queryKey: ["category-data"],
-    queryFn: fetchCategory,
-  });
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
-  if (isError) {
-    return <h2>{error.message}</h2>;
-  }
-
-  console.log({ data });
 
   const form = useForm<FormCategory>({
-    defaultValues: {
-      name: data.data.name,
-      slug: data.data.slug,
-      description: data.data.slug,
+    defaultValues: async () => {
+      const { data } = await axios.get(`/api/category/${params.id}`);
+      return data;
     },
   });
 
   const { register, handleSubmit, formState } = form;
-  const { errors } = formState;
+  const { errors, defaultValues } = formState;
+  console.log({ defaultValues });
+
   const onSubmit = async (data: FormCategory) => {
     console.log("Form submitted...", data);
     axios
-      .post("http://localhost:3000/api/category", data)
+      .put(`http://localhost:3000/api/category/${params.id}`, data)
       .then((res) => {
         console.log({ res });
       })
@@ -130,11 +124,21 @@ const Page = () => {
         </div>
 
         <div className="flex justify-center items-center gap-4 mt-[50px]">
-          <button className="py-[10px] px-[35px] border border-[#e5e5e5] bg-[#e5e5e5] uppercase">
-            RESET
-          </button>
-          <button className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase">
-            ADD NEW
+          <Link href="/dashboard/categories">
+            <button className="py-[10px] px-[35px] border border-[#e5e5e5] bg-[#e5e5e5] uppercase">
+              Back
+            </button>
+          </Link>
+
+          <button
+            className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase"
+            onClick={() => {
+              toast({
+                title: "Category successfully updated ",
+              });
+            }}
+          >
+            Update
           </button>
         </div>
       </form>
