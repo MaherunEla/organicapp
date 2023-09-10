@@ -19,6 +19,9 @@ const CategoryForm = () => {
       .post("http://localhost:3000/api/category", data)
       .then((res) => {
         console.log({ res });
+        toast({
+          title: "Category Add successfully  ",
+        });
       })
       .catch((err) => console.log({ err }));
   };
@@ -109,14 +112,7 @@ const CategoryForm = () => {
           <button className="py-[10px] px-[35px] border border-[#e5e5e5] bg-[#e5e5e5] uppercase">
             RESET
           </button>
-          <button
-            className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase"
-            onClick={() => {
-              toast({
-                title: "Category Add successfully  ",
-              });
-            }}
-          >
+          <button className="py-[10px] px-[35px] border border-[#80bc00] hover:bg-[#28a745] bg-[#80bc00] text-[#ffffff] uppercase">
             ADD NEW
           </button>
         </div>

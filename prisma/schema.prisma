@@ -65,10 +65,12 @@ model Product {
 }
 
 model Coupons {
-  id        String   @id @default(uuid())
-  percent   Int
-  currency  Int
-  createdAt DateTime @default(now())
+  id          String    @id @default(uuid())
+  percent     Int
+  currency    Int
+  expired     DateTime?
+  status      String?
+  description String?
 }
 
 model Setting {

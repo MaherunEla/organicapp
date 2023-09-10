@@ -1,22 +1,54 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FormCoupons } from "@/app/(admin)/types";
+
 import axios from "axios";
+import { useQueryClient } from "@tanstack/react-query";
+import { toast, useToast } from "@/components/ui/use-toast";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { z } from "zod";
 const CouponsForm = () => {
-  const form = useForm<FormCoupons>();
+  const { toast } = useToast();
+  const schema = z.object({
+    percent: z.number({
+      required_error: "percent is required",
+      invalid_type_error: "percent must be a number",
+    }),
+
+    currency: z.number({
+      required_error: "currency is required",
+      invalid_type_error: "currency must be a number",
+    }),
+    expired: z.date({
+      required_error: "Please select a date and time",
+      invalid_type_error: "That's not a date!",
+    }),
+    description: z.string().nonempty("description is required"),
+  });
+  type FormCoupon = z.infer<typeof schema>;
+
+  const form = useForm<FormCoupon>({
+    resolver: zodResolver(schema),
+  });
 
   const { register, handleSubmit, formState } = form;
   const { errors } = formState;
-  const onSubmit = async (data: FormCoupons) => {
+  const onSubmit = async (data: FormCoupon) => {
     console.log("Form submitted...", data);
+
     axios
       .post("http://localhost:3000/api/coupon", data)
       .then((res) => {
         console.log({ res });
+        toast({
+          title: "Category successfully updated ",
+        });
       })
       .catch((err) => console.log({ err }));
   };
+  const queryClient = useQueryClient();
+  queryClient.invalidateQueries({ queryKey: ["coupon-data"] });
   return (
     <div>
       <h4 className="mb-[10px]">New Coupon</h4>
@@ -40,14 +72,11 @@ const CouponsForm = () => {
         <div className="flex flex-col gap-3 mb-4">
           <label htmlFor="percent">By Percent</label>
           <input
-            type="text"
+            type="number"
             className="w-full border border-[#ddd]  py-3"
             id="percent"
             {...register("percent", {
-              required: {
-                value: true,
-                message: "bypercent  is required",
-              },
+              valueAsNumber: true,
             })}
           />
           <p className="error">{errors.percent?.message}</p>
@@ -56,47 +85,37 @@ const CouponsForm = () => {
         <div className=" flex flex-col gap-3 mb-4">
           <label htmlFor="currency">By Currency</label>
           <input
-            type="text"
+            type="number"
             className="w-full border border-[#ddd]  py-3"
             id="currency"
             {...register("currency", {
-              required: {
-                value: true,
-                message: "bycurrency is required",
-              },
+              valueAsNumber: true,
             })}
           />
+
           <p className="error">{errors.currency?.message}</p>
         </div>
 
-        {/* <div className="flex flex-col gap-3 mb-4">
-          <label htmlFor="createdAt">Expired Date</label>
+        <div className="flex flex-col gap-3 mb-4">
+          <label htmlFor="expired">Expired Date</label>
           <input
-            type="text"
+            type="date"
             className="w-full border border-[#ddd] py-3"
-            id="expaireddate"
-            {...register("createdAt", {
-              required: {
-                value: true,
-                message: " expireddate name is required",
-              },
+            id="expired"
+            {...register("expired", {
+              valueAsDate: true,
             })}
           />
-          <p className="error">{errors.createdAt?.message}</p>
-        </div> */}
+          <p className="error">{errors.expired?.message}</p>
+        </div>
         <div className=" flex flex-col gap-3 mb-4">
           <label htmlFor="decription">Description</label>
           <textarea
             className="w-full border border-[#ddd] py-3"
             id="description"
-            rows="6"
-            cols="50"
-            {...register("description", {
-              required: {
-                value: true,
-                message: "Description is required",
-              },
-            })}
+            rows={6}
+            cols={50}
+            {...register("description")}
           />
 
           <p className="error">{errors.description?.message}</p>
