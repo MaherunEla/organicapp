@@ -11,50 +11,6 @@
   }
 } */
 
-@layer base {
-  body {
-    font-size: 1 rem;
-    box-sizing: border-box;
-    position: relative;
-    overflow-x: hidden;
-    background: white;
-    /* @apply font-roboto; */
-  }
-  /* h1 {
-    @apply font-roboto text-sea_green text-[44px] xl:text-[70px] font-extrabold leading-normal;
-  }
-  h2 {
-    @apply font-roboto text-sea_green text-[36px] xl:text-[50px] font-bold xl:font-extrabold leading-[50px];
-  }
-  h3 {
-    @apply font-roboto text-sea_green text-[40px] font-extrabold leading-normal;
-  }
-  h4 {
-    @apply font-roboto text-sea_green text-[35px] font-extrabold leading-normal;
-  }
-  h5 {
-    @apply font-roboto text-sea_green text-[30px] font-extrabold leading-normal;
-  }
-  h6 {
-    @apply font-roboto text-sea_green text-xl xl:text-[25px] font-semibold xl:font-extrabold;
-  }
-  p {
-    @apply font-open_sen text-sea_green text-[14px] xl:text-lg font-normal leading-[29.7px];
-  }
-  .quotes {
-    @apply font-open_sen text-sea_green text-xl font-bold leading-[33px];
-  }
-  .yellow {
-    @apply font-yellowtail text-green text-[28px] lg:text-[36px] font-normal leading-normal;
-  }
-  .sb {
-    @apply border border-red-500;
-  }
-  .bg-styles {
-    @apply bg-center bg-no-repeat bg-cover;
-  } */
-}
-
 .container {
   margin: 0 auto;
   width: calc(100% - 24px);
@@ -127,5 +83,47 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+  }
+
+  body {
+    font-size: 1 rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+    background: white;
+    @apply font-roboto;
+  }
+  h1 {
+    @apply font-roboto text-sea_green text-[44px] xl:text-[70px] font-extrabold leading-normal;
+  }
+  h2 {
+    @apply font-roboto text-sea_green text-[36px] xl:text-[50px] font-bold xl:font-extrabold leading-[50px];
+  }
+  h3 {
+    @apply font-roboto text-sea_green text-[40px] font-extrabold leading-normal;
+  }
+  h4 {
+    @apply font-roboto text-sea_green text-[35px] font-extrabold leading-normal;
+  }
+  h5 {
+    @apply font-roboto text-sea_green text-[30px] font-extrabold leading-normal;
+  }
+  h6 {
+    @apply font-roboto text-sea_green text-xl xl:text-[25px] font-semibold xl:font-extrabold;
+  }
+  p {
+    @apply font-open_sen text-sea_green text-[14px] xl:text-lg font-normal leading-[29.7px];
+  }
+  .quotes {
+    @apply font-open_sen text-sea_green text-xl font-bold leading-[33px];
+  }
+  .yellow {
+    @apply font-yellowtail text-green text-[28px] lg:text-[36px] font-normal leading-normal;
+  }
+  .sb {
+    @apply border border-red-500;
+  }
+  .bg-styles {
+    @apply bg-center bg-no-repeat bg-cover;
   }
 }
