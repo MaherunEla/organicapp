@@ -41,14 +41,12 @@ const Page = () => {
     <div className="container">
       <Navbar title="Settings" subtitle="Account Settings" />
 
-      <div>
-        <h4 className="mb-[30px]">Account Settings</h4>
+      <div className="w-full  xl:w-[892px]">
+        <h4 className="mb-[30px] text-2xl font-normal text-[#222] ">
+          Account Settings
+        </h4>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-          className=" w-[892px]"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className=" w-full">
           <div className=" flex gap-[20px]">
             <div className="w-full flex flex-col gap-3">
               <label htmlFor="name">Full Name</label>
