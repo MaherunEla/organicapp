@@ -15,12 +15,14 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+
     extend: {
       fontFamily: {
         roboto: ["var(--roboto)"],
         yellowtail: ["var(--yellowtail)"],
         open_sen: ["var(--open_sens)"],
       },
+
       colors: {
         sea_green: "#274C5B",
         green: "#7EB693",

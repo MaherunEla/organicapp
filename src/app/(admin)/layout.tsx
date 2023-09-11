@@ -26,7 +26,10 @@ export default function RootLayout({ children }: { children: ReactElement }) {
       <body className={`${work_sans.variable} `}>
         <QueryClientProvider client={queryClient}>
           <div className="flex ">
-            <Sidebar />
+            <div className="hidden lg:flex flex-col ">
+              <Sidebar />
+            </div>
+
             <div className="flex-1">{children}</div>
           </div>
           <Toaster />

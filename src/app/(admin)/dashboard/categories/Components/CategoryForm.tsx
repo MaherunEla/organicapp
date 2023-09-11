@@ -41,7 +41,11 @@ const CategoryForm = () => {
     <div>
       <h4 className="mb-[10px]">New Category</h4>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className=" w-[300px]">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+        className=" w-full lg:w-[300px]"
+      >
         {/* <div className="flex flex-col gap-3 mb-4">
            <label htmlFor="couponcode">ID</label>
             <input type='text' className="w-full border border-[#ddd]  py-3" id="id" {...register("id",{required:{
@@ -108,7 +112,7 @@ const CategoryForm = () => {
           <p className="error">{errors.description?.message}</p>
         </div>
 
-        <div className="flex justify-center items-center gap-4 mt-[50px]">
+        <div className="flex justify-between lg:justify-center items-center lg:gap-4 mt-[50px]">
           <button className="py-[10px] px-[35px] border border-[#e5e5e5] bg-[#e5e5e5] uppercase">
             RESET
           </button>
