@@ -92,4 +92,5 @@ export type Order = {
   fullfillment: string;
   total: float;
   createdAt: string;
+  icon: any;
 };

@@ -1,5 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { Order } from "../../types";
+import { DropdownMenuDemo } from "../orders/Components/DropdownMenuDemo";
 
 const columnHelper = createColumnHelper<Order>();
 export const columns = [
@@ -14,9 +15,21 @@ export const columns = [
   columnHelper.accessor("product", {
     cell: (info) => {
       const products = info.getValue();
-      console.log(products.name);
+      console.log("products", products);
+      return (
+        <div>
+          {products.map((e, index) => (
+            <span
+              className="font-semibold text-base font-work_sans"
+              key={index}
+            >
+              {e.name}({e.quantity}){", "}
+            </span>
+          ))}
+        </div>
+      );
     },
-    header: () => "Product",
+    header: () => "Products",
   }),
   columnHelper.accessor("payment", {
     cell: (info) => (
@@ -33,5 +46,13 @@ export const columns = [
   columnHelper.accessor("total", {
     header: () => "Total",
     cell: (info) => <p className="tablep">${info.renderValue().toFixed(2)}</p>,
+  }),
+  columnHelper.accessor("icon", {
+    header: () => "",
+    cell: (info) => {
+      const Icon = info.getValue();
+      const id = info.row.original.id;
+      return <DropdownMenuDemo id={id} />;
+    },
   }),
 ];
