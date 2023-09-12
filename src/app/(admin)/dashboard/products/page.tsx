@@ -56,7 +56,7 @@ const Page = () => {
             </span>
           </button>
         </form>
-        <div className=" border border-[#e5e5e5] w-full xl:w-[420px] px-5 py-[10px]">
+        <div className=" border border-[#e5e5e5]  w-full xl:w-[420px] px-5 py-[10px]">
           <form className="flex items-center justify-between">
             <input type="text" placeholder="Search product" value=""></input>
             <SlMagnifier size={18} />

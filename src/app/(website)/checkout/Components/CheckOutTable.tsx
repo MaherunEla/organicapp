@@ -20,10 +20,14 @@ const CheckOutTable = () => {
     (sum, item) => sum + item.discount * item.quantity,
     0
   );
-  const Cart = async (cart: any[]) => {
+  const handleCheckout = async () => {
     console.log("cart data", cart);
+    const data = {
+      product: cart,
+      total,
+    };
     axios
-      .post("http://localhost:3000/api/order", cart)
+      .post("/api/order", data)
       .then((res) => {
         console.log({ res });
         toast({
@@ -120,7 +124,7 @@ const CheckOutTable = () => {
 
       <div className="px-[20px] py-[15px] lg:px-[39px] lg:py-[28px] bg-sea_green rounded-2xl ">
         <button
-          onClick={() => Cart([])}
+          onClick={handleCheckout}
           className="font-roboto text-base lg:text-[20px] font-bold leading-normal text-white"
         >
           Proceed to Checkout

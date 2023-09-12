@@ -24,7 +24,7 @@ const Navbar = (props: { title: string; subtitle: string }) => {
         <span className="font-semibold text-[#222] uppercase">
           view your store
         </span>
-        <IoExitOutline size={20} />
+        <IoExitOutline size={30} />
       </div>
     </div>
   );

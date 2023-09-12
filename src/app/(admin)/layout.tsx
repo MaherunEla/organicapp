@@ -7,6 +7,7 @@ import { Provider } from "react-redux/es/exports";
 import { store } from "../redux_store/store";
 import Sidebar from "./layout/Sidebar";
 import { Toaster } from "@/components/ui/toaster";
+import MobileNavbar from "./layout/MobileNavbar";
 
 const queryClient = new QueryClient();
 const work_sans = Work_Sans({
@@ -25,12 +26,18 @@ export default function RootLayout({ children }: { children: ReactElement }) {
     <html lang="en">
       <body className={`${work_sans.variable} `}>
         <QueryClientProvider client={queryClient}>
-          <div className="flex ">
+          <div className="flex">
             <div className="hidden lg:flex flex-col ">
               <Sidebar />
             </div>
 
-            <div className="flex-1">{children}</div>
+            <div className="flex-1">
+              <div className="lg:hidden ">
+                <MobileNavbar />
+              </div>
+
+              {children}
+            </div>
           </div>
           <Toaster />
         </QueryClientProvider>

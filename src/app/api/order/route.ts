@@ -12,11 +12,10 @@ export const GET = async (req) => {
 
 export async function POST(req: Request) {
   const data = await req.json();
+  console.log(data);
 
   const res = await prisma.order.create({
-    data: {
-      product: data,
-    },
+    data,
   });
   return NextResponse.json(res);
 }

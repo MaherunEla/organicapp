@@ -50,7 +50,7 @@ const Sidebar = () => {
           <Link href={item.url} key={index}>
             <div className="flex gap-[30px] pb-[10px] hover:text-[#26901b] active:text-[#26901b]">
               <item.icon
-                className="text-[#666666] hover:text-[#26901b] active:text-[#26901b]"
+                className="text-[#222] hover:text-[#26901b] active:text-[#26901b]"
                 size={20}
               />
               <p className="font-medium font-work_sans hover:text-[#26901b] active:text-[#26901b] text-base text-[#222] leading-5">
@@ -61,11 +61,18 @@ const Sidebar = () => {
         ))}
       </div>
       <div>
-        <div className="w-[130px] h-[25px] relative mb-[10px]">
-          <Image src="/assets/images/admin/logo.png" fill alt="logo" />
-        </div>
+        <Link href="/">
+          <div className="flex gap-2">
+            <div className="w-[40px] h-[50px] relative">
+              <Image src="/assets/images/Home/Logo.svg" fill alt="logo" />
+            </div>
+            <span className="font-roboto text-2xl lg:text-[38px] font-bold leading-normal text-sea_green">
+              Organick
+            </span>
+          </div>
+        </Link>
         <p className="text-sm text-[#666666] font-normal leading-6 font-work_sans">
-          ©2021 Farmart marketplace.
+          ©2021 Organic.
         </p>
         <p className="text-sm text-[#666666] font-normal leading-6 font-work_sans">
           {" "}

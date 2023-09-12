@@ -24,9 +24,9 @@ model User {
 model Order {
   id           String       @id @default(uuid())
   product      Json
+  total        Float
   payment      Payment      @default(Unpaid)
   fullfillment Fullfillment @default(InProgrss)
-  total        Float
   createdAt    DateTime     @default(now())
 }
 

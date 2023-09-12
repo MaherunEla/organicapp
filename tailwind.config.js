@@ -21,6 +21,7 @@ module.exports = {
         roboto: ["var(--roboto)"],
         yellowtail: ["var(--yellowtail)"],
         open_sen: ["var(--open_sens)"],
+        work_sans: ["var(--work_sans)"],
       },
 
       colors: {

@@ -87,7 +87,7 @@ export type FormProduct = {
 
 export type Order = {
   id: string;
-  product: object;
+  product: json;
   payment: string;
   fullfillment: string;
   total: float;
