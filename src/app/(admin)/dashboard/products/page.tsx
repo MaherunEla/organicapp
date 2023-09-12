@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ProductTable from "./Components/ProductTable";
 import { BiDiamond } from "react-icons/bi";
+import { SlMagnifier } from "react-icons/sl";
 
 const Page = () => {
   const [selectedValue, setSelectedValue] = useState<string>("0");
@@ -18,7 +19,7 @@ const Page = () => {
       <Navbar title="Products" subtitle="Products Listings" />
       <div className="flex items-end justify-end pb-[50px] ">
         <Link href="/dashboard/products/addnewproducts">
-          <p className="w-[190px] py-[10px] px-[35px] uppercase font-medium text-sm text-[#ffffff] bg-[#80bc00]">
+          <p className="w-[190px] py-[10px] px-[35px] uppercase font-medium text-sm text-[#ffffff] bg-[#80bc00] hover:bg-[#26901b]">
             + New Product
           </p>
         </Link>
@@ -48,12 +49,21 @@ const Page = () => {
             <option value="1">Active</option>
             <option value="2">Inactive</option>
           </select>
-          <button className="flex justify-center items-center px-7">
+          <button className="flex justify-center items-center px-7 border border-[#e5e5e5] bg-[#e5e5e5] hover:bg-[#26901b]">
             <BiDiamond size={20} />
-            <span className="uppercase">filter</span>
+            <span className="uppercase ml-2 font-medium text-sm text-[#000000]">
+              filter
+            </span>
           </button>
         </form>
+        <div className=" border border-[#e5e5e5] w-full xl:w-[420px] px-5 py-[10px]">
+          <form className="flex items-center justify-between">
+            <input type="text" placeholder="Search product" value=""></input>
+            <SlMagnifier size={18} />
+          </form>
+        </div>
       </div>
+
       <ProductTable />
     </div>
   );

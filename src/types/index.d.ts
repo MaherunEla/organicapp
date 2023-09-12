@@ -1,96 +1,93 @@
-export type Person = {
+export type NavDataProps = {
+  url: string;
+};
+export type AboutData = {
+  img: string;
+  title: string;
+  subtitle: string;
+};
+
+export interface IProduct {
   id: number;
+  slug: string;
+  title: string;
+  img: string;
+  subTitle: string;
+  price: string;
+  discountPrice: string;
+}
+export interface IRelatedProduct
+  extends Array<{
+    id: number;
+    slug: string;
+    title: string;
+    img: string;
+    subTitle: string;
+    price: string;
+    discountPrice: string;
+  }> {}
+
+export interface IBlogPost {
+  id: number;
+  author: string;
+  img: string;
+  icon: string;
   date: string;
-  product: string;
-  payment: string;
-  fullfillments: string;
-  total: number;
-  icon: any;
-};
+  month: string;
+  posted: string;
+  title: string;
+  subTitle: string;
+}
 
-export type Product = {
+export interface IPortfolio {
   id: number;
+  img: string;
+  title: string;
+  subTitle: string;
+}
+
+export interface IBlogPostSingle
+  extends Array<{
+    id: number;
+    author: string;
+    img: string;
+    icon: string;
+    date: string;
+    month: string;
+    posted: string;
+    title: string;
+    subTitle: string;
+  }> {}
+
+export interface ICard {
+  id: number;
+  image: string;
   name: string;
-  sku: string;
-  stock: string;
+  slug: string;
+  alt: string;
   price: number;
-  categories: string;
-  createdAt: string;
-  icon: any;
-};
-
-export type Customers = {
-  id: number;
-  name: string;
-  phone: string;
-  balance: number;
-  totalorder: number;
-  created: string;
-  status: string;
-  icon: any;
-};
-
-export type Coupons = {
-  id: string;
-  percent: number;
-  currency: number;
-  expired: string;
-  status: string;
-  icon: any;
-};
-
-export type Categories = {
-  id: number;
-  name: string;
-  slug: string;
-  createdAt: string;
-  icon: any;
-};
-
-export type FormValues = {
-  fullname: string;
-  displayname: string;
-  email: string;
-  role: string;
-  address: string;
-  bio: string;
-};
-
-export type FormCoupons = {
-  id: string;
-  percent: number;
-  currency: number;
-  createdAt: string;
-  status: string;
+  discount: number;
+  star: number;
+  category: {
+    name: string;
+    slug: string;
+  };
   description: string;
-};
+}
 
-export type FormCategory = {
-  id: number;
-  name: string;
-  slug: string;
-  created: string;
-  description: string;
-};
-
-export type FormProduct = {
-  id: number;
-  name: string;
-  productsummary: string;
-  price: Int;
-  description: string;
-  productgallery: string;
-  sku: string;
-  productcategoryId: string;
-  icon: any;
-};
-export type FormSetting = {
-  id: string;
-  name: string;
-  displayname: string;
-  email: string;
-  role: string;
-  address: string;
-  bio: string;
-  createdAt: string;
-};
+export interface IRelatedCard
+  extends Array<{
+    id: number;
+    image: string;
+    name: string;
+    slug: string;
+    alt: string;
+    price: number;
+    discount: number;
+    star: number;
+    category: {
+      name: string;
+      slug: string;
+    };
+    description: string;
+  }> {}

@@ -21,6 +21,15 @@ model User {
   @@index([email])
 }
 
+model Order {
+  id           String       @id @default(uuid())
+  product      Json
+  payment      Payment      @default(Unpaid)
+  fullfillment Fullfillment @default(InProgrss)
+  total        Float
+  createdAt    DateTime     @default(now())
+}
+
 // model UserPreference {
 //   id           String  @id @default(uuid())
 //   emailUpdates Boolean
@@ -88,4 +97,15 @@ enum Role {
   BASIC
   EDITOR
   ADMIN
+}
+
+enum Payment {
+  Paid
+  Unpaid
+}
+
+enum Fullfillment {
+  Delivered
+  InProgrss
+  Cancel
 }

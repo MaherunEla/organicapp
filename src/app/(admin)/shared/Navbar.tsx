@@ -4,7 +4,7 @@ import { IoExitOutline } from "react-icons/io5";
 
 const Navbar = (props: { title: string; subtitle: string }) => {
   return (
-    <div className="hidden pt-[60px] pb-[70px] lg:grid grid-cols-3  gap-20 items-center ">
+    <div className="hidden pt-[60px] mb-[70px] lg:grid grid-cols-3  gap-20 items-center ">
       <div className=" w-full ">
         <h3 className="text-2xl font-bold text-[#222]">{props.title}</h3>
         <p>{props.subtitle}</p>

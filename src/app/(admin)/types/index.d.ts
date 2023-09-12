@@ -84,3 +84,12 @@ export type FormProduct = {
   productcategoryId: string;
   icon: any;
 };
+
+export type Order = {
+  id: string;
+  product: object;
+  payment: string;
+  fullfillment: string;
+  total: float;
+  createdAt: string;
+};

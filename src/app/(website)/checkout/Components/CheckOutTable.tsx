@@ -9,16 +9,33 @@ import {
   decrementQuantity,
   removeCart,
 } from "@/app/redux_store/cartAddSlice";
+import axios from "axios";
+import { toast, useToast } from "@/components/ui/use-toast";
 const CheckOutTable = () => {
+  const { toast } = useToast();
   const cart = useAppSelector((state) => state?.cart?.products);
+  console.log(cart);
+
   const total = cart.reduce(
     (sum, item) => sum + item.discount * item.quantity,
     0
   );
+  const Cart = async (cart: any[]) => {
+    console.log("cart data", cart);
+    axios
+      .post("http://localhost:3000/api/order", cart)
+      .then((res) => {
+        console.log({ res });
+        toast({
+          title: "Category Add successfully  ",
+        });
+      })
+      .catch((err) => console.log({ err }));
+  };
   const dispatch = useAppDispatch();
   return (
     <div className="container flex flex-col items-center justify-center pt-[134px] ">
-      <table className="table-auto w-[1400px] border-collapse  ">
+      <table className="table-auto w-[1400px] border-collapse mb-20 ">
         <thead className="text-lg font-normal text-sea_green font-open_sen">
           <tr>
             <th className="border border-gray ">Products</th>
@@ -102,9 +119,12 @@ const CheckOutTable = () => {
       </table>
 
       <div className="px-[20px] py-[15px] lg:px-[39px] lg:py-[28px] bg-sea_green rounded-2xl ">
-        <h6 className="font-roboto text-base lg:text-[20px] font-bold leading-normal text-white">
+        <button
+          onClick={() => Cart([])}
+          className="font-roboto text-base lg:text-[20px] font-bold leading-normal text-white"
+        >
           Proceed to Checkout
-        </h6>
+        </button>
       </div>
     </div>
   );
