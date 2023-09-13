@@ -44,7 +44,7 @@ export const products = [
     name: "Calabrese Broccoli",
     slug: "calabrese_broccoli",
     alt: "vegetable",
-    price: 20.00,
+    price: 20.0,
     discount: 13.0,
     star: 5,
     category: {
@@ -168,7 +168,7 @@ export const products = [
   },
   {
     id: 9,
-    image: "/assets/images/Home/mung.png",
+    image: "/assets/images/Home/brocoli2.png",
     name: "Mung Bean",
     slug: "mung_bean",
     alt: "vegetable",
@@ -268,8 +268,8 @@ export const products = [
     name: "Cabbage",
     slug: "cabbage",
     alt: "vegetable",
-    price: 20.00,
-    discount: 17.00,
+    price: 20.0,
+    discount: 17.0,
     star: 5,
     category: {
       name: "Vegetable",

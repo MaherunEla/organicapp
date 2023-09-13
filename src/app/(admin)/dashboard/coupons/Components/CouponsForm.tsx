@@ -10,6 +10,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 const CouponsForm = () => {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
+
   const schema = z.object({
     percent: z.number({
       required_error: "percent is required",
@@ -41,14 +43,14 @@ const CouponsForm = () => {
       .post("http://localhost:3000/api/coupon", data)
       .then((res) => {
         console.log({ res });
+        queryClient.invalidateQueries({ queryKey: ["coupon-data"] });
         toast({
           title: "Category successfully updated ",
         });
       })
       .catch((err) => console.log({ err }));
   };
-  const queryClient = useQueryClient();
-  queryClient.invalidateQueries({ queryKey: ["coupon-data"] });
+
   return (
     <div>
       <h4 className="mb-[10px]">New Coupon</h4>

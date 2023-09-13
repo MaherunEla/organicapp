@@ -1,6 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { Order } from "../../types";
 import { DropdownMenuDemo } from "../orders/Components/DropdownMenuDemo";
+import { BsDot } from "react-icons/bs";
 
 const columnHelper = createColumnHelper<Order>();
 export const columns = [
@@ -9,7 +10,7 @@ export const columns = [
     cell: (info) => info.getValue(),
   }),
   columnHelper.accessor("createdAt", {
-    cell: (info) => <p className="tablep">{info.getValue()}</p>,
+    cell: (info) => <p className="tablep font-semibold">{info.getValue()}</p>,
     header: () => <span>Date</span>,
   }),
   columnHelper.accessor("product", {
@@ -40,12 +41,49 @@ export const columns = [
     header: () => "Payment",
   }),
   columnHelper.accessor("fullfillment", {
-    cell: (info) => <p className="tablep">{info.getValue()}</p>,
+    cell: (info) => {
+      const Color = info.getValue();
+      console.log(Color);
+      if (Color == "Delivered") {
+        return (
+          <p className="tablep flex items-center font-semibold ">
+            <BsDot size={40} className="text-green" />
+            {info.getValue()}
+          </p>
+        );
+      }
+      if (Color == "InProgress") {
+        return (
+          <p className="tablep flex items-center font-semibold">
+            <BsDot size={40} className="text-green" />
+            {info.getValue()}
+          </p>
+        );
+      }
+      if (Color == "Cancel") {
+        return (
+          <p className="tablep flex items-center font-semibold">
+            <BsDot size={40} className="text-red-500" />
+            {info.getValue()}
+          </p>
+        );
+      } else {
+        return (
+          <p className="tablep flex items-center font-semibold">
+            <BsDot size={40} className="text-green" />
+            {info.getValue()}
+          </p>
+        );
+      }
+    },
+
     header: () => " Fullfillments",
   }),
   columnHelper.accessor("total", {
     header: () => "Total",
-    cell: (info) => <p className="tablep">${info.renderValue().toFixed(2)}</p>,
+    cell: (info) => (
+      <p className="tablep font-semibold">${info.renderValue().toFixed(2)}</p>
+    ),
   }),
   columnHelper.accessor("icon", {
     header: () => "",
