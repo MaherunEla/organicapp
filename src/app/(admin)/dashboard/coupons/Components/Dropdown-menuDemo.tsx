@@ -35,12 +35,15 @@ import { IoEllipsisHorizontalOutline } from "react-icons/io5";
 import Link from "next/link";
 import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
+import { useQueryClient } from "react-query";
 export function DropdownMenuDemo(props: { id: string }) {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
   const deleteCategory = async (id) => {
     try {
-      const response = await axios.delete(`/api/recentorder/${id}`);
+      const response = await axios.delete(`/api/coupon/${id}`);
       console.log(response);
+      queryClient.invalidateQueries({ queryKey: ["coupon-data"] });
     } catch (error) {
       console.error("An error occurred while deleting the category:", error);
     }

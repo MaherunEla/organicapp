@@ -15,6 +15,7 @@ const fetchCategoryId = (id) => {
 };
 const Page = () => {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   // const [name, setName] = useState("");
   // const [slug, setSlug] = useState("");
@@ -25,6 +26,7 @@ const Page = () => {
   const form = useForm<FormCategory>({
     defaultValues: async () => {
       const { data } = await axios.get(`/api/category/${params.id}`);
+
       return data;
     },
   });
@@ -39,6 +41,7 @@ const Page = () => {
       .put(`http://localhost:3000/api/category/${params.id}`, data)
       .then((res) => {
         console.log({ res });
+        queryClient.invalidateQueries({ queryKey: ["category-data"] });
       })
       .catch((err) => console.log({ err }));
   };
@@ -109,8 +112,8 @@ const Page = () => {
           <textarea
             className="w-full border border-[#ddd] py-3"
             id="description"
-            rows="6"
-            cols="50"
+            rows={6}
+            cols={50}
             //onChange={(e) => setDescription(e.target.value)}
             {...register("description", {
               required: {

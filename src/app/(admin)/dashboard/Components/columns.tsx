@@ -19,7 +19,7 @@ export const columns = [
       console.log("products", products);
       return (
         <div>
-          {products.map((e, index) => (
+          {products?.map((e, index) => (
             <span
               className="font-semibold text-base font-work_sans"
               key={index}
@@ -33,11 +33,23 @@ export const columns = [
     header: () => "Products",
   }),
   columnHelper.accessor("payment", {
-    cell: (info) => (
-      <p className="w-fit font-semibold text-sm text-[#669900] py-[6px] px-[10px] bg-[#eff4e5] rounded-[4px] ">
-        {info.getValue()}
-      </p>
-    ),
+    cell: (info) => {
+      const Payment = info.getValue();
+      if (Payment == "Paid") {
+        return (
+          <p className="w-fit font-semibold text-sm text-[#669900]  py-[6px] px-[10px] bg-[#eff4e5] rounded-[4px] ">
+            {info.getValue()}
+          </p>
+        );
+      } else {
+        return (
+          <p className="w-fit font-semibold text-sm text-[#666666]  py-[6px] px-[10px] bg-[#e9e9e9] rounded-[4px] ">
+            {info.getValue()}
+          </p>
+        );
+      }
+    },
+
     header: () => "Payment",
   }),
   columnHelper.accessor("fullfillment", {
@@ -47,12 +59,12 @@ export const columns = [
       if (Color == "Delivered") {
         return (
           <p className="tablep flex items-center font-semibold ">
-            <BsDot size={40} className="text-green" />
+            <BsDot size={40} className="text-[#669900]" />
             {info.getValue()}
           </p>
         );
       }
-      if (Color == "InProgress") {
+      if (Color == " InProgrss") {
         return (
           <p className="tablep flex items-center font-semibold">
             <BsDot size={40} className="text-green" />
@@ -87,10 +99,10 @@ export const columns = [
   }),
   columnHelper.accessor("icon", {
     header: () => "",
-    cell: (info) => {
-      const Icon = info.getValue();
-      const id = info.row.original.id;
-      return <DropdownMenuDemo id={id} />;
+    cell: ({ row, getValue }) => {
+      const Icon = getValue();
+      const id = row.original.id;
+      return <DropdownMenuDemo row={row.original} />;
     },
   }),
 ];

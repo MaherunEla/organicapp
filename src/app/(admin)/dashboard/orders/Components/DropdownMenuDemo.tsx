@@ -36,9 +36,25 @@ import Link from "next/link";
 import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { BsDot } from "react-icons/bs";
+import { DialogDemo } from "./DialogDemo";
 
-export function DropdownMenuDemo(props: { id: string }) {
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useState } from "react";
+
+export function DropdownMenuDemo({ row }) {
   const { toast } = useToast();
+  const [modalOpen, setModalOpen] = useState(false);
+  console.log({ row });
+
   const queryClient = useQueryClient();
 
   const deleteOrder = async (id) => {
@@ -82,33 +98,43 @@ export function DropdownMenuDemo(props: { id: string }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost">
+        <Button className="active:border active:border-slate-100 rounded-[10px] active:bg-slate-100">
           <IoEllipsisHorizontalOutline />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="ml-[100px] w-32  bg-white border-white">
+      <DropdownMenuContent>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem className=" bg-[#e5e7eb] ">
-            <Link href={`/dashboard/order/user/${props.id}`}>
-              <span>view</span>
-            </Link>
+          <DropdownMenuItem>
+            <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+              <DialogTrigger asChild>
+                <span>view</span>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Invoice</DialogTitle>
+                  <DialogDescription>Hello</DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
           </DropdownMenuItem>
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
-              <span>Payment</span>
-            </DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger>Payment</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
-              <DropdownMenuSubContent className=" bg-white border-white ">
+              <DropdownMenuSubContent>
                 {["Paid", "Unpaid"].map((item, index) => (
-                  <DropdownMenuItem key={index}>
+                  <DropdownMenuItem
+                    key={index}
+                    className="flex justify-between items-center"
+                  >
                     <button
                       onClick={() => {
-                        ChangePaymentStatus(props.id, item);
+                        ChangePaymentStatus(row.id, item);
                       }}
                     >
-                      {item}
+                      <span>{item}</span>
                     </button>
+                    {item == row.payment && <BsDot size={20} />}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuSubContent>
@@ -117,28 +143,32 @@ export function DropdownMenuDemo(props: { id: string }) {
 
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <span>Fullfilments</span>
+              <span>Fullfillments</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
-              <DropdownMenuSubContent className=" bg-white border-white ">
-                {["Delivered", "InProgress", "Cancel"].map((item, index) => (
-                  <DropdownMenuItem key={index}>
+              <DropdownMenuSubContent>
+                {["Delivered", "InProgrss", "Cancel"].map((item, index) => (
+                  <DropdownMenuItem
+                    key={index}
+                    className="flex justify-between items-center"
+                  >
                     <button
                       onClick={() => {
-                        ChangefullfillmentStatus(props.id, item);
+                        ChangefullfillmentStatus(row.id, item);
                       }}
                     >
                       {item}
                     </button>
+                    {item == row.fullfillment && <BsDot size={20} />}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="flex justify-between">
             <button
               onClick={() => {
-                deleteOrder(props.id);
+                deleteOrder(row.id);
                 toast({
                   title: "Product Deleted successfully ",
                 });
@@ -146,6 +176,7 @@ export function DropdownMenuDemo(props: { id: string }) {
             >
               Delete
             </button>
+            <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />

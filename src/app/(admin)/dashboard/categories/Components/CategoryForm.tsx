@@ -8,6 +8,7 @@ import { QueryClient, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/components/ui/use-toast";
 const CategoryForm = () => {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const form = useForm<FormCategory>();
 
@@ -19,14 +20,14 @@ const CategoryForm = () => {
       .post("http://localhost:3000/api/category", data)
       .then((res) => {
         console.log({ res });
+        queryClient.invalidateQueries({ queryKey: ["category-data"] });
         toast({
           title: "Category Add successfully  ",
         });
       })
       .catch((err) => console.log({ err }));
   };
-  const queryClient = useQueryClient();
-  queryClient.invalidateQueries({ queryKey: ["category-data"] });
+
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
   };

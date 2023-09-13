@@ -6,6 +6,7 @@ import { defaultData } from "../../Components/RecentTableData";
 import axios from "axios";
 import { QueryClient, useQuery } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
+
 const fetchOrder = async () => {
   const { data } = await axios.get("/api/order");
   return data;
@@ -20,8 +21,10 @@ const OrderTable = () => {
     return <h2>Loading...</h2>;
   }
   if (isError) {
-    return <h2>{error.message}</h2>;
+    return <h2>{(error as any).message}</h2>;
   }
+
+  console.log(data);
 
   return (
     <div>
