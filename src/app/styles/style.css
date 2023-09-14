@@ -50,3 +50,8 @@
   width: calc(100% - 80px);
   max-width: 1505px;
 }
+@media (min-width: 960px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}

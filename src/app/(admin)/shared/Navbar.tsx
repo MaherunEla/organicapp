@@ -4,19 +4,19 @@ import { IoExitOutline } from "react-icons/io5";
 
 const Navbar = (props: { title: string; subtitle: string }) => {
   return (
-    <div className="hidden pt-[60px] mb-[70px] lg:grid grid-cols-3  gap-20 items-center ">
-      <div className=" w-full ">
+    <div className="hidden pt-[60px] mb-[70px] lg:flex  items-center justify-between ">
+      <div>
         <h3 className="text-2xl font-bold text-[#222]">{props.title}</h3>
         <p>{props.subtitle}</p>
       </div>
 
-      <div className="w-full ">
+      <div className="w-full lg:w-[400px]">
         <form>
           <button className="p-5">
             <SlMagnifier size={18} />
           </button>
           <input type="text" placeholder="Search something" value=""></input>
-          <hr className="bg-[#ddd] opacity-25"></hr>
+          <div className="w-full h-[1px] bg-[#ddd] hover:bg-[#26901b]"></div>
         </form>
       </div>
 

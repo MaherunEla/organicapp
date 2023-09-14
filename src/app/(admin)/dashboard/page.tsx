@@ -12,7 +12,7 @@ const page = () => {
       {/* <RecentOrder /> */}
 
       <div className="flex flex-col lg:flex-row gap-10">
-        <div className="lg:flex-1">
+        <div className=" lg:flex-1">
           <OrderTable />
         </div>
         <div className="hidden lg:flex w-[1px] bg-[#ddd]"></div>
