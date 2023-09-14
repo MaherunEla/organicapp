@@ -27,13 +27,13 @@ const HomeAbout = () => {
           <div className=" bg-[url('/assets/images/Home/about.png')] bg-styles w-[911px] h-[867px]"></div>
           <div className="flex flex-col items-center xl:items-start justify-center xl:max-w-[690px]">
             <h4 className="yellow">About Us</h4>
-            <h2 className="text-center ">
+            <h2 className="text-center lg:text-start ">
               We Believe in Working Accredited Farmers
             </h2>
-            <p className="pt-[24px] xl:pt-[14px] text-center">
+            <p className="pt-[24px] xl:pt-[14px] text-center lg:text-start">
               Simply dummy text of the printing and typesetting industry. Lorem
-              had ceased to been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley.
+              had ceased to been the industry&apos;s standard dummy text ever
+              since the 1500s, when an unknown printer took a galley.
             </p>
             <div className="pt-[46px] flex gap-[23px] xl:gap-[19px]">
               <div className="w-[48px] h-[48px] xl:w-[101px] xl:h-[101px] flex items-center justify-center bg-white rounded-[8px] xl:rounded-[20px]">

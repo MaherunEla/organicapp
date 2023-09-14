@@ -7,7 +7,7 @@ import { BlogPostData } from "@/app/(website)/blog/Components/BlogPostData";
 const HomeOrganic = () => {
   const news = BlogPostData.slice(0, 2);
   return (
-    <div >
+    <div>
       <div className="pt-[60px] xl:pt-0 flex flex-col xl:flex-row">
         <div className="w-full h-[510px]  xl:w-[952px] xl:h-[931px] relative">
           <Image src="/assets/images/Home/eco.png" fill alt="home" />
@@ -35,7 +35,7 @@ const HomeOrganic = () => {
         </div>
       </div>
 
-      <div className="bg-[#F1F8F4] h-[957px] xl:py-[187px] flex flex-col xl:flex-row gap-7 xl:gap-[42px]">
+      <div className="bg-[#F1F8F4] h-[957px] xl:py-[187px] flex flex-col xl:flex-row gap-7 justify-between">
         <div className="w-full xl:w-[612px] h-[583px] bg-[url('/assets/images/Home/juice.jpg')] bg-styles flex items-center justify-center">
           <div className="bg-white rounded-[20px] max-w-[320px]  px-[60px] py-[33px] ">
             <h6>Organic Juice</h6>
@@ -96,7 +96,11 @@ const HomeOrganic = () => {
                 >
                   <div className="flex flex-row gap-2">
                     <div className="w-[18px] h-[20px] relative">
-                      <Image src="/assets/images/Home/vector2.svg" fill alt="icon" />
+                      <Image
+                        src="/assets/images/Home/vector2.svg"
+                        fill
+                        alt="icon"
+                      />
                     </div>
                     <h6 className="font-roboto text-lg font-normal">
                       By {item.author}
@@ -106,7 +110,7 @@ const HomeOrganic = () => {
                   <p>{item.subTitle}</p>
                   <div className="max-w-[220px] mt-[19px] px-[39px] py-[28px] bg-yellow rounded-2xl flex items-center justify-center gap-[10px]">
                     <h6 className="font-roboto text-[20px] font-bold leading-normal text-sea_green">
-                     Read More
+                      Read More
                     </h6>
                     <BsArrowRightShort className=" m-[2px] border rounded-full border-[#335B6B] bg-[#335B6B] text-white" />
                   </div>
