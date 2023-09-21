@@ -11,6 +11,7 @@ import {
 } from "@/app/redux_store/cartAddSlice";
 import axios from "axios";
 import { toast, useToast } from "@/components/ui/use-toast";
+import Link from "next/link";
 const CheckOutTable = () => {
   const { toast } = useToast();
   const cart = useAppSelector((state) => state?.cart?.products);
@@ -57,7 +58,7 @@ const CheckOutTable = () => {
                   <div className="flex items-start">
                     <div className="flex items-center justify-center">
                       <div className="w-[124px] h-[138px] relative">
-                        <Image src={item.images} fill alt="product" />
+                        <Image src={item.image} fill alt="product" />
                       </div>
                       <p className="text-sea_green font-roboto text-[22px] font-normal ">
                         {item.name}
@@ -123,12 +124,14 @@ const CheckOutTable = () => {
       </table>
 
       <div className="px-[20px] py-[15px] lg:px-[39px] lg:py-[28px] bg-sea_green rounded-2xl ">
-        <button
-          onClick={handleCheckout}
-          className="font-roboto text-base lg:text-[20px] font-bold leading-normal text-white"
-        >
-          Proceed to Checkout
-        </button>
+        <Link href="/billing">
+          <button
+            onClick={handleCheckout}
+            className="font-roboto text-base lg:text-[20px] font-bold leading-normal text-white"
+          >
+            Proceed to Checkout
+          </button>
+        </Link>
       </div>
     </div>
   );

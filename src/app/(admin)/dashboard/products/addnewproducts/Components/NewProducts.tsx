@@ -18,12 +18,9 @@ const fetchCategory = () => {
 const NewProducts = () => {
   const queryClient = new QueryClient();
   const { toast } = useToast();
-  const [name, setName] = useState("");
-  const [summery, setSummery] = useState("");
-  const [sale, setSale] = useState("");
-  const [description, setDescription] = useState("");
+
   const [productgallery, setProductgallery] = useState("");
-  const [sku, setSku] = useState("");
+
   const [productcategoryId, setProductcategoryId] = useState("");
   const [images, setImages] = useState<
     {
@@ -50,6 +47,8 @@ const NewProducts = () => {
   const [preview, setPreview] = useState(null);
   const onSubmit = async (data: FormProduct) => {
     data.price = Number(data.price);
+    data.discountprice = Number(data.discountprice);
+    data.quantity = Number(data.quantity);
     console.log("Form submitted...", data);
     console.log({ data });
 
@@ -92,7 +91,6 @@ const NewProducts = () => {
                   type="text"
                   className="w-full border border-[#ddd]  py-3"
                   id="name"
-                  onChange={(e) => setName(e.target.value)}
                   {...register("name", {
                     required: {
                       value: true,
@@ -118,7 +116,6 @@ const NewProducts = () => {
                   id="summery"
                   rows="6"
                   cols="50"
-                  onChange={(e) => setSummery(e.target.value)}
                   {...register("productsummary", {
                     required: {
                       value: true,
@@ -136,7 +133,6 @@ const NewProducts = () => {
                   type="number"
                   className="w-full border border-[#ddd]  py-3"
                   id="price"
-                  onChange={(e) => setSale(e.target.value)}
                   {...register("price", {
                     required: {
                       value: true,
@@ -145,6 +141,36 @@ const NewProducts = () => {
                   })}
                 />
               </div>
+              <div className=" flex flex-col gap-3 mb-4">
+                <label htmlFor="discountprice">Discount Price</label>
+                <input
+                  type="number"
+                  className="w-full border border-[#ddd]  py-3"
+                  id="discountprice"
+                  {...register("discountprice", {
+                    required: {
+                      value: true,
+                      message: "discount Price is required",
+                    },
+                  })}
+                />
+              </div>
+
+              <div className=" flex flex-col gap-3 mb-4">
+                <label htmlFor="quantity ">Quantity </label>
+                <input
+                  type="number"
+                  className="w-full border border-[#ddd]  py-3"
+                  id="quantity "
+                  {...register("quantity", {
+                    required: {
+                      value: true,
+                      message: "Quantity  Price is required",
+                    },
+                  })}
+                />
+              </div>
+
               <select
                 {...register("productcategoryId")}
                 className="border border-[#ddd] py-[10px] px-[20px]"
@@ -170,9 +196,8 @@ const NewProducts = () => {
                 <textarea
                   className="w-full border border-[#ddd] py-3"
                   id="description"
-                  rows="6"
-                  cols="50"
-                  onChange={(e) => setDescription(e.target.value)}
+                  rows={6}
+                  cols={50}
                   {...register("description", {
                     required: {
                       value: true,
@@ -241,7 +266,6 @@ const NewProducts = () => {
                   type="text"
                   className="w-full border border-[#ddd]  py-3"
                   id="sku"
-                  onChange={(e) => setSku(e.target.value)}
                   {...register("sku", {
                     required: {
                       value: true,

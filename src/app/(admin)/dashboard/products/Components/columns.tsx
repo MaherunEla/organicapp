@@ -1,13 +1,26 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { Product } from "@/app/(admin)/types";
 import { DropdownMenuDemo } from "../addnewproducts/Components/DropdownMenuDemo";
+import Image from "next/image";
 
 const columnHelper = createColumnHelper<Product>();
 export const columns = [
-  columnHelper.accessor("id", {
-    header: () => "ID",
-    cell: (info) => <p className="tablep font-normal">{info.getValue()}</p>,
+  // columnHelper.accessor("id", {
+  //   header: () => "ID",
+  //   cell: (info) => <p className="tablep font-normal">{info.getValue()}</p>,
+  // }),
+  columnHelper.accessor("productgallery", {
+    header: () => "Image",
+    cell: (info) => {
+      const image = info.getValue();
+      return (
+        <div>
+          <Image src={image} height={60} width={60} alt="product" />
+        </div>
+      );
+    },
   }),
+
   columnHelper.accessor("name", {
     header: () => "Name",
     cell: (info) => (
@@ -32,7 +45,11 @@ export const columns = [
     header: () => "Price",
     cell: (info) => <p className="tablep">£{info.renderValue().toFixed(2)}</p>,
   }),
-  columnHelper.accessor("categories", {
+  columnHelper.accessor("discountprice", {
+    header: () => "Discount Price",
+    cell: (info) => <p className="tablep">£{info.renderValue().toFixed(2)}</p>,
+  }),
+  columnHelper.accessor("productcategory.name", {
     header: () => "Categories",
     cell: (info) => (
       <p className="tablep font-normal hover:text-[#669900] cursor-pointer">

@@ -6,19 +6,22 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 
 export const GET = async (req) => {
-  const products = await prisma.product.findMany({
-    include: {
-      productcategory: true,
-    },
-  });
-  return NextResponse.json(products);
+  const customer = await prisma.customers.findMany();
+  return NextResponse.json(customer);
 };
 
 export async function POST(req: Request) {
   const data = await req.json();
+  console.log(data);
 
-  const res = await prisma.product.create({
-    data: data,
+  const customeremail = await prisma.customers.findFirst({
+    where: { email: data.email as string },
   });
-  return NextResponse.json(res);
+  if (customeremail == null) {
+    const res = await prisma.customers.create({
+      data: data,
+    });
+
+    return NextResponse.json(res);
+  }
 }

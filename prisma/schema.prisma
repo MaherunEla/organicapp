@@ -30,6 +30,19 @@ model Order {
   createdAt    DateTime     @default(now())
 }
 
+model Customers {
+  id                String @id @default(uuid())
+  name              String
+  district          String
+  town              String
+  postalcode        String
+  area              String
+  phonenumber       String
+  email             String
+  alternativephnnum String
+  ordersnote        String
+}
+
 // model UserPreference {
 //   id           String  @id @default(uuid())
 //   emailUpdates Boolean
@@ -66,6 +79,8 @@ model Product {
   sku               String   @unique
   productsummary    String?
   price             Float
+  discountprice     Float
+  quantity          Int
   createdAt         DateTime @default(now())
   description       String?
   productgallery    String

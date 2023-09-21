@@ -14,19 +14,10 @@ export type Product = {
   sku: string;
   stock: string;
   price: number;
-  categories: string;
+  discountprice: number;
+  productgallery: string;
+  productcategory: any;
   createdAt: string;
-  icon: any;
-};
-
-export type Customers = {
-  id: number;
-  name: string;
-  phone: string;
-  balance: number;
-  totalorder: number;
-  created: string;
-  status: string;
   icon: any;
 };
 
@@ -77,7 +68,9 @@ export type FormProduct = {
   id: number;
   name: string;
   productsummary: string;
-  price: Int;
+  price: number;
+  discountprice: number;
+  quantity: number;
   description: string;
   productgallery: string;
   sku: string;

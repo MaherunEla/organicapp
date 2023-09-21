@@ -91,3 +91,16 @@ export interface IRelatedCard
     };
     description: string;
   }> {}
+
+export type FormCustomers = {
+  id: string;
+  name: string;
+  district: string;
+  town: string;
+  postalcode: string;
+  area: string;
+  phonenumber: string;
+  email: string;
+  alternativephnnum: string;
+  ordersnote: string;
+};
